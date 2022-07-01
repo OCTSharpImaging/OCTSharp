@@ -1,0 +1,5 @@
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\Release\OCTSharp.csproj.ResolveComReference.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\Release\OCTSharp.MainDlg.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\Release\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\Release\OCTSharp.csproj.GenerateResource.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\Release\OCTSharp.csproj.CoreCompileInputs.cache

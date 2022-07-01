@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ManagedCuda.netCore/11.0.43": {
+        "runtime": {
+          "ManagedCuda.netCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManagedCuda.netCore/11.0.43": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

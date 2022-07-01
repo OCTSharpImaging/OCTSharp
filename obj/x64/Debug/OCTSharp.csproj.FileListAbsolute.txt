@@ -1,0 +1,350 @@
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.GLControl.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\System.Drawing.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ZedGraph.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.NiLmClientDLL.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.MStudioCLM.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.GLControl.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\OpenTK.GLControl.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ZedGraph.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\de\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\es\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\fr\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\hu\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\it\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ja\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\pt\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\ru\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\sk\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\sv\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\tr\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\zh-cn\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\bin\x64\Debug\zh-tw\ZedGraph.resources.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.GLControl.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\System.Drawing.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.NiLmClientDLL.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.MStudioCLM.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.GLControl.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\OpenTK.GLControl.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp - Copy\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.GLControl.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\System.Drawing.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.GLControl.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\OpenTK.GLControl.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_CPUDisplay\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.GLControl.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\System.Drawing.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.GLControl.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\OpenTK.GLControl.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Sync\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.GLControl.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\System.Drawing.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.GLControl.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\OpenTK.GLControl.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Img\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaBlas.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaBlas.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_8BitImg\bin\x64\Debug\CudaBlas.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\CudaBlas.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\CudaBlas.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\obj\x64\Debug\OCTSharp.csproj.AssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\CudaBlas.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\CudaBlas.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.csproj.AssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\MX4_OCTSharp_Transpose\OCTSharp\obj\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\OCTSharp.exe.config
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\OCTSharp.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaBlas.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaFFT.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\ManagedCuda.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\MathNet.Numerics.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\NationalInstruments.DAQmx.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\NationalInstruments.Common.dll
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaBlas.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaBlas.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaFFT.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\CudaFFT.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\ManagedCuda.pdb
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\ManagedCuda.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\MathNet.Numerics.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\NationalInstruments.DAQmx.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\bin\x64\Debug\NationalInstruments.Common.xml
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.csproj.AssemblyReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.MainDlg.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.exe.manifest
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.application
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.exe
+F:\Drive_D\Weihao Chen\Projects\C#Projects\DAQ+MX4\OCTSharp_multiFrame\obj\x64\Debug\OCTSharp.pdb
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\OCTSharp.exe.config
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\OCTSharp.exe.manifest
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\OCTSharp.application
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\OCTSharp.exe
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\OCTSharp.pdb
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\DALSA.SaperaLT.SapClassBasic.dll
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\MathNet.Numerics.dll
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\NationalInstruments.DAQmx.dll
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\NationalInstruments.Common.dll
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\CudaBlas.pdb
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\CudaBlas.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\CudaFFT.pdb
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\CudaFFT.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\ManagedCuda.pdb
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\ManagedCuda.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\MathNet.Numerics.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\NationalInstruments.DAQmx.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\bin\x64\Debug\NationalInstruments.Common.xml
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.csprojAssemblyReference.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.csproj.ResolveComReference.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.MainDlg.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.csproj.GenerateResource.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.csproj.CoreCompileInputs.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.exe.manifest
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.application
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.csproj.CopyComplete
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.exe
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.6\obj\x64\Debug\OCTSharp.pdb

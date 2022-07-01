@@ -1,0 +1,226 @@
+!SESSION 2022-01-30 19:42:50.356 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_301
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data @noDefault
+
+!ENTRY org.eclipse.ui 4 4 2022-01-30 19:43:04.790
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.editors.
+
+!ENTRY com.nvidia.viper 4 0 2022-01-30 19:43:19.902
+!MESSAGE Can't find dependent DLL. 
+
+Check that the CUPTI DLL is on your PATH environment. It is located in folder 
+
+<CUDA_DIR>/extras/CUPTI/lib64
+!SESSION 2022-01-30 20:04:31.640 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_301
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data @noDefault
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-30 20:04:36.198
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2022-01-30 20:04:37.020
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.editors.
+
+!ENTRY com.nvidia.viper 4 0 2022-01-30 20:04:42.390
+!MESSAGE Can't find dependent DLL. 
+
+Check that the CUPTI DLL is on your PATH environment. It is located in folder 
+
+<CUDA_DIR>/extras/CUPTI/lib64
+
+!ENTRY org.eclipse.ui 4 0 2022-01-30 20:05:01.218
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Text.getText(Text.java:1351)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessContents$4$1.run(QuickAccessContents.java:579)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4273)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3360)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:371)
+	at org.eclipse.jface.dialogs.MessageDialog.openError(MessageDialog.java:434)
+	at com.nvidia.viper.ui.ViperMessageDialog.openError(ViperMessageDialog.java:45)
+	at com.nvidia.viper.ViperExceptionHandler$1.run(ViperExceptionHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at com.nvidia.viper.ViperExceptionHandler.handle(ViperExceptionHandler.java:37)
+	at com.nvidia.viper.ViperStandaloneWorkbench.informUnableToLoadLibraries(ViperStandaloneWorkbench.java:313)
+	at com.nvidia.viper.jni.LibVp.initialize(LibVp.java:81)
+	at com.nvidia.viper.jni.NativeCuda.<clinit>(NativeCuda.java:16)
+	at com.nvidia.viper.jni.NativeCupti.<clinit>(NativeCupti.java:29)
+	at com.nvidia.viper.activity.CuptiActivityAttributeKind.getValue(CuptiActivityAttributeKind.java:55)
+	at com.nvidia.viper.activity.CuptiActivityAttributeKind.getValue(CuptiActivityAttributeKind.java:71)
+	at com.nvidia.viper.model.Executable.setDefaultAdvancedOptions(Executable.java:1247)
+	at com.nvidia.viper.model.Executable.<init>(Executable.java:270)
+	at com.nvidia.viper.actions.NewSessionAction.run(NewSessionAction.java:101)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.nvidia.viper.application.Application.start(Application.java:108)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2022-01-30 20:05:01.221
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Text.getText(Text.java:1351)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessContents$4$1.run(QuickAccessContents.java:579)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4273)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3360)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:371)
+	at org.eclipse.jface.dialogs.MessageDialog.openError(MessageDialog.java:434)
+	at com.nvidia.viper.ui.ViperMessageDialog.openError(ViperMessageDialog.java:45)
+	at com.nvidia.viper.ViperExceptionHandler$1.run(ViperExceptionHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at com.nvidia.viper.ViperExceptionHandler.handle(ViperExceptionHandler.java:37)
+	at com.nvidia.viper.ViperStandaloneWorkbench.informUnableToLoadLibraries(ViperStandaloneWorkbench.java:313)
+	at com.nvidia.viper.jni.LibVp.initialize(LibVp.java:81)
+	at com.nvidia.viper.jni.NativeCuda.<clinit>(NativeCuda.java:16)
+	at com.nvidia.viper.jni.NativeCupti.<clinit>(NativeCupti.java:29)
+	at com.nvidia.viper.activity.CuptiActivityAttributeKind.getValue(CuptiActivityAttributeKind.java:55)
+	at com.nvidia.viper.activity.CuptiActivityAttributeKind.getValue(CuptiActivityAttributeKind.java:71)
+	at com.nvidia.viper.model.Executable.setDefaultAdvancedOptions(Executable.java:1247)
+	at com.nvidia.viper.model.Executable.<init>(Executable.java:270)
+	at com.nvidia.viper.actions.NewSessionAction.run(NewSessionAction.java:101)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at com.nvidia.viper.application.Application.start(Application.java:108)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2022-01-30 20:05:19.129 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_301
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data @noDefault
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-30 20:05:23.297
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2022-01-30 20:05:24.133
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.editors.
+
+!ENTRY com.nvidia.viper 4 0 2022-01-30 20:05:27.428
+!MESSAGE Can't find dependent DLL. 
+
+Check that the CUPTI DLL is on your PATH environment. It is located in folder 
+
+<CUDA_DIR>/extras/CUPTI/lib64
+!SESSION 2022-01-30 20:07:43.448 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_301
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data @noDefault
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-30 20:07:46.221
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2022-01-30 20:07:47.037
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.editors.
+
+!ENTRY com.nvidia.viper 4 0 2022-01-30 20:07:50.839
+!MESSAGE Can't find dependent DLL. 
+
+Check that the CUPTI DLL is on your PATH environment. It is located in folder 
+
+<CUDA_DIR>/extras/CUPTI/lib64
+!SESSION 2022-01-30 20:09:00.222 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_301
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data @noDefault
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-30 20:09:03.531
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2022-01-30 20:09:04.391
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.editors.
+
+!ENTRY com.nvidia.viper 4 0 2022-01-30 20:09:07.692
+!MESSAGE Can't find dependent DLL. 
+
+Check that the CUPTI DLL is on your PATH environment. It is located in folder 
+
+<CUDA_DIR>/extras/CUPTI/lib64

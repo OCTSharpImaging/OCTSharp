@@ -1,0 +1,84 @@
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\$safeprojectname$.pdb
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.DAQmx.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.MStudioCLM.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.DAQmx.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\WriteLineCam.MainForm.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\AIAOSync.csproj.GenerateResource.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\AIAOSync.csproj.CoreCompileInputs.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\AIAOSync.csproj.CopyComplete
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.pdb
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\bin\Debug\NationalInstruments.Vision.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\obj\Debug\AIAOSync.csprojAssemblyReference.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\$safeprojectname$.pdb
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.DAQmx.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.MStudioCLM.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.DAQmx.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\bin\Debug\NationalInstruments.Vision.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\AIAOSync.csprojAssemblyReference.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\WriteLineCam.MainForm.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\AIAOSync.csproj.GenerateResource.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\AIAOSync.csproj.CoreCompileInputs.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\AIAOSync.csproj.CopyComplete
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\No ImageViewer\obj\Debug\$safeprojectname$.pdb
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\$safeprojectname$.pdb
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.DAQmx.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.Common.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.MStudioCLM.dll
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.DAQmx.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.Acquisition.Imaq.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\bin\Debug\NationalInstruments.Vision.Common.xml
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\AIAOSync.csprojAssemblyReference.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.exe.config
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\WriteLineCam.MainForm.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\AIAOSync.csproj.GenerateResource.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\AIAOSync.csproj.CoreCompileInputs.cache
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.exe.manifest
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.application
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\AIAOSync.csproj.CopyComplete
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.exe
+D:\Weihao Chen\Projects\C#Projects\DAQmx+IMAQ\AIAOSync\BufferList\obj\Debug\$safeprojectname$.pdb
