@@ -89,10 +89,14 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   *v1.4.8: First Beta version Release
   
   # Road Map
- ⬜ Alternative Processing buffers to optimize GPU performance
- ⬜ OpenTK Integration for real-time 3D C-Scan display
- ⬜ Bidirectional scanner pattern to optimize acquisition speed
- ⬜ Flat GUI update
+ ⬜ Alternative Processing buffers to optimize GPU performance  
+ ⬜ OpenTK Integration for real-time 3D C-Scan display    
+ ⬜ Bidirectional scanner pattern to optimize acquisition speed  
+ ⬜ Flat GUI update  
+    
+  # License  
+  This project is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International License. Check LICENSE.md file for details
+ https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
 
