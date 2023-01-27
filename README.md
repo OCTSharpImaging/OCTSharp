@@ -89,7 +89,10 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   *v1.4.8: First Beta version Release
   
   # Road Map
-  -[ ]
+ ⬜ Alternative Processing buffers to optimize GPU performance
+ ⬜ OpenTK Integration for real-time 3D C-Scan display
+ ⬜ Bidirectional scanner pattern to optimize acquisition speed
+ ⬜ Flat GUI update
 
 
 
