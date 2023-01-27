@@ -18,3 +18,10 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215009909-802d63ec-3259-4e65-abfa-3c3b90066c56.png" width="200" height="230">
 <p align="center">Figure 1. Programming Structure. ManagedCuda is open-source and avaliable at https://github.com/kunzmi/managedCuda<p align="center">
+
+  ##Programming Dependencies
+  * .NET Framework 4.6.2
+  * NVIDIA CUDA 11.1
+  * ManagedCUDA 11.1
+  
+  
