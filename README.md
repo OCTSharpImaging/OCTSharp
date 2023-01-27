@@ -28,15 +28,6 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   * NVIDIA CUDA 11.1
   * ManagedCUDA 11.1
 
-# Get Started
-1. Download Zip 
-2. Extract all files
-3. Open OCTSharp.exe
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
-<p align="center">Figure 3. OCTSharp GUI.<p align="center">
-  
  # Set Camera hareware paraters with manufacture's software
   * For Example, Dalsa Teledyne OCTOPLUS Camera is configured with CommCam.exe
   * Set Camera parameters, such as: Line Acquisition Rate, Externel Trigger, CameraLink Tap Config, Image Bit Rate, etc..
@@ -57,4 +48,24 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   * Image Buffer and ROI
    <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG">
 
+  # Get Started
+  1. Download Zip 
+  2. Extract all files
+  3. Open OCTSharp.exe
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
+<p align="center">Figure 3. OCTSharp GUI.<p align="center">
+  
+  4. Adjust Scanner Voltage (sacaning distance)
+  5. Load the corresponding .ccf file
+  6. Load 3rd Calibration Curve as excel file if needed 
+  7. Enable display features (Warning: Enable mutiple plotting charts may cause GUI freeze)
+  8. Click "Live" button to perform Imaging
+  9. Click "Stop" to exit imaging section
+  10. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled)
+  
+  # Visual Studio Compile 
+
+  
   
