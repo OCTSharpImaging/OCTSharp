@@ -28,7 +28,7 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   * NVIDIA CUDA 11.1
   * ManagedCUDA 11.1
 # Hardware Configuration
-Figure below shows the current hardware configuration. The C# .NET layer was developed using the Software Development Kit (SDK) from Teledyne Dalsa and National Instrument. Therefore, any image acquisition card (IMAQ) from Teledyne Dalsa and data acquisition card (DAQ) from National Instrument are compatible with OCTSharp. In this project, we tested mutiple IMAQ cards, including Xtium-CL MX4 and Xcelera-CL LX1; DAQ cards including PCIe 6361and PCI 6221. Four linear cameras have been also tested independently, which works as expected, including Dalsa Octoplus, AVIIVA SM2 4010 CL, Basler spL 2048 70km, and Sensor Unlimited GL 2048R. User can use any linear camera in OCTSharp as long as the camera file is configured appropriately. Galvanometer scanner can be modified freely as well, where the scanning distance can be adjusted via voltage parameters setting on UI. DAQ is mainly responsible for hardware synchronization and scanner control. DAQs from other vendors can be used as long as C# SDK is provided and the corresponding analog and digital hardware functions are modified accordingly. The master clock of the system is supplied as a strobe signal by a user-specified internal frequency from the Teledyne Dalsa IMAQ card, in the vendor software: CamExpert. Using this master clock, OCTSharp synchronizes the camera with the galvanometer scanner. In addition, the camera runs on external trigger mode based on the acquisition clock, which is generated from master clock and it is adjustable by the user.
+Figure 3 shows the current hardware configuration. The C# .NET layer was developed using the Software Development Kit (SDK) from Teledyne Dalsa and National Instrument. Therefore, any image acquisition card (IMAQ) from Teledyne Dalsa and data acquisition card (DAQ) from National Instrument are compatible with OCTSharp. In this project, we tested mutiple IMAQ cards, including Xtium-CL MX4 and Xcelera-CL LX1; DAQ cards including PCIe 6361and PCI 6221. Four linear cameras have been also tested independently, which works as expected, including Dalsa Octoplus, AVIIVA SM2 4010 CL, Basler spL 2048 70km, and Sensor Unlimited GL 2048R. User can use any linear camera in OCTSharp as long as the camera file is configured appropriately. Galvanometer scanner can be modified freely as well, where the scanning distance can be adjusted via voltage parameters setting on UI. DAQ is mainly responsible for hardware synchronization and scanner control. DAQs from other vendors can be used as long as C# SDK is provided and the corresponding analog and digital hardware functions are modified accordingly. The master clock of the system is supplied as a strobe signal by a user-specified internal frequency from the Teledyne Dalsa IMAQ card, in the vendor software: CamExpert. Using this master clock, OCTSharp synchronizes the camera with the galvanometer scanner. In addition, the camera runs on external trigger mode based on the acquisition clock, which is generated from master clock and it is adjustable by the user.
   
   <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215050382-0af7a790-d49a-43b4-b245-b5b68f4e1d79.PNG">
@@ -61,7 +61,7 @@ Figure below shows the current hardware configuration. The C# .NET layer was dev
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
-<p align="center">Figure 3. OCTSharp GUI.<p align="center">
+<p align="center">Figure 4. OCTSharp GUI.<p align="center">
   
   4. Adjust Scanner Voltage (sacaning distance)
   5. Load the corresponding .ccf file
@@ -74,10 +74,20 @@ Figure below shows the current hardware configuration. The C# .NET layer was dev
   # OCT Display options 
   <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215049174-a5bf054d-1aa4-49ba-8e75-5c50a74122a3.png">
-<p align="center">Figure4. Different visualization features in OCTSharp showing the newt anterior chamber of eye. (A) B-Scan (2048x2048) of a Newt eye; (B) An average B-Scan consists of 10 B-Scans at the same scanning position as A’s (B); (C) A Speckle Variant map that shows the blood vessels location in A; (D) An enface image of a newt’s eye; (E) An Volumetric C-Scan generated from data collected in OCTSharp; (F) The angiography display function of OCTSharp that shows the enface blood vessels of (D)..<p align="center">
+<p align="center">Figure 5. Different visualization features in OCTSharp showing the newt anterior chamber of eye. (A) B-Scan (2048x2048) of a Newt eye; (B) An average B-Scan consists of 10 B-Scans at the same scanning position as A’s (B); (C) A Speckle Variant map that shows the blood vessels location in A; (D) An enface image of a newt’s eye; (E) An Volumetric C-Scan generated from data collected in OCTSharp; (F) The angiography display function of OCTSharp that shows the enface blood vessels of (D)..<p align="center">
+  
+  # Software Performance
+Two different PC configurations were tested (Tab 1). The highest A-Scan acquisition rate is 250kHz, and A-Scan processing speed can reach up to 350 kHz. The limitation for current processing speed is the data I/O between CPU memory and GPU memory, as it takes up about 50% of the CPU resource. 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/109831624/215051432-abee4bf4-b314-4061-a471-5854dd146251.png">
+<p align="center">Table 1. Software Performance w/ different PC Configurations.<p align="center">
   
   # Compile/Debug with Visual Studio
   * Visual Studio 2017/2019 Community
+  
+  # Road Map
+
+
 
 
 
