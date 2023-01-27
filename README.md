@@ -27,3 +27,7 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   * .NET Framework 4.6.2
   * NVIDIA CUDA 11.1
   * ManagedCUDA 11.1
+
+  # Getting Started
+  1. abc
+  2. def
