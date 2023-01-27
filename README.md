@@ -35,7 +35,7 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
 <img src="https://user-images.githubusercontent.com/109831624/215050382-0af7a790-d49a-43b4-b245-b5b68f4e1d79.PNG">
 <p align="center">Figure 3. OCTSharp hardware configuration. AO0, AO1 are analog output channels on PCIe-6361; CTR0 and TRIG 1 are trigger channels on the PCIe-6361, which are acquisition trigger for camera and master clock respectively; J4 I/O is the general Input & Output ports on the Xtium CL MX4; Two medium CameraLink cables are used to achieve 250kHz image acquisition with Dalsa OCTOPLUS camera at 10-bit 8TAP mode and 85MHz pixel clock. MX-4 has a bandwidth of 1.4GB/s on PCIe Gen.2x4 connection <p align="center">
   
- #Environment Preparation
+ # Environment Preparation
  ## Set Camera hareware parameters with manufacture's software
   * For Example, Dalsa Teledyne OCTOPLUS Camera is configured with CommCam.exe
   * Set Camera parameters, such as: Line Acquisition Rate, Externel Trigger, CameraLink Tap Config, Image Bit Rate, etc..
