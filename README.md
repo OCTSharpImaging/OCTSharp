@@ -97,7 +97,7 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
  ⬜ Flat GUI update  
     
   # License  
-  This project is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International License. Check LICENSE.md file for details
+  This project is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International. Check LICENSE.md file for details
  https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
