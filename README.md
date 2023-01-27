@@ -85,7 +85,11 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   # Compile/Debug with Visual Studio
   * Visual Studio 2017/2019 Community
   
+  # Version History
+  *v1.4.8: First Beta version Release
+  
   # Road Map
+  -[ ]
 
 
 
