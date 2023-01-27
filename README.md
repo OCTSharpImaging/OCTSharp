@@ -36,3 +36,16 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png" width="800" height="400">
 <p align="center">Figure 3. OCTSharp GUI.<p align="center">
+  
+ # Configure .ccf Camera File
+  1. Download SaperaLT SDK that includes the Camera File Configuration Tool: CamExpert (https://www.teledynedalsa.com/en/products/imaging/vision-software/sapera-lt/)
+  2. Open CamExpert
+  3. Create New .ccf File and set Camera settings
+  
+  ## Example Camera Settings: Sensor Unlimited GL 2048 R (more avaliable in Camera files folder) 
+  * Basic Timing
+  * Advance Control
+  * Externel Trigger
+  * Image Buffer and ROI
+  
+  
