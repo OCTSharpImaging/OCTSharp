@@ -14,11 +14,7 @@ interactive, intuitive, and high-performance OCT developmental solution.
 
 # Programming Structure
 OCTSharp is a muti-threads C# Windows form application that provides hardware control, data acquisition, real-time data processing, and image visualization (Fig. 1). The frontend User Interface (UI) is developed with native .NET framework, and the backend is consisted of two fundamental layers: the hardware control layer developed with the C# SDK  from Teledyne SaperaLT and National Instrument, and the processing layer that is built with ManagedCuda (Fig. 2). ManagedCuda is an open-source C# Application Program Interface (API) that allow CUDA usage in C#. All CUDA kernels are pre-compiled and accessed in real-time during parallel CUDA processing pipeline.
-  ## Programming Dependencies
-  * .NET Framework 4.6.2
-  * NVIDIA CUDA 11.1
-  * ManagedCUDA 11.1
-  * 
+  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215009909-802d63ec-3259-4e65-abfa-3c3b90066c56.png" width="200" height="230">
 <p align="center">Figure 1. Programming Structure. ManagedCuda is open-source and avaliable at https://github.com/kunzmi/managedCuda<p align="center">
@@ -26,4 +22,8 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215012313-6a08d241-f1a4-4a75-a764-2bb36fdb2e72.png" width="680" height="500">
 <p align="center">Figure 2. Software Architecture.<p align="center">
-
+  
+## Programming Dependencies
+  * .NET Framework 4.6.2
+  * NVIDIA CUDA 11.1
+  * ManagedCUDA 11.1
