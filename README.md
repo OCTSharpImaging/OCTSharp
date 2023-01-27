@@ -37,6 +37,11 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
 <img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
 <p align="center">Figure 3. OCTSharp GUI.<p align="center">
   
+ # Set Camera hareware paraters with manufacture's software
+  * For Example, Dalsa Teledyne OCTOPLUS Camera is configured with CommCam.exe
+  * Set Camera parameters, such as: Line Acquisition Rate, Externel Trigger, CameraLink Tap Config, Image Bit Rate, etc..
+  <img src="https://user-images.githubusercontent.com/109831624/215045672-5208d85c-580b-47e0-9c49-ff2e0339ec74.JPG">
+  
  # Configure .ccf Camera File
   1. Download SaperaLT SDK that includes the Camera File Configuration Tool: CamExpert (https://www.teledynedalsa.com/en/products/imaging/vision-software/sapera-lt/)
   2. Open CamExpert
@@ -52,5 +57,4 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   * Image Buffer and ROI
    <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG">
 
-  
   
