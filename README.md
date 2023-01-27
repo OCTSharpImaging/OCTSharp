@@ -42,7 +42,7 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   2. Open CamExpert
   3. Create New .ccf File and set Camera settings
   
-  ## Example Camera Settings: Sensor Unlimited GL 2048 R (more avaliable in Camera files folder) 
+  ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS (more avaliable in Camera files folder) 
   * Basic Timing
   <img src="" width="800" height="400">
   * Advance Control
