@@ -88,7 +88,7 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   * Visual Studio 2017/2019 Community
   
   # Version History
-  *v1.4.8: First Beta version Release
+  *v1.4.8: First release version
   
   # Road Map
  ⬜ Alternative Processing buffers to optimize GPU performance  
