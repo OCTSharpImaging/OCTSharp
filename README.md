@@ -46,7 +46,7 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   2. Open CamExpert
   3. Create New .ccf File and set Camera settings
   
-  ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS (more avaliable in Camera files folder) 
+  ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS  (more avaliable in Camera files folder) 
   * Basic Timing
   <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG">
   * Advance Control
@@ -88,7 +88,7 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   * Visual Studio 2017/2019 Community
   
   # Version History
-  *v1.4.8: First release version
+  * v1.4.8: First release version
   
   # Road Map
  ⬜ Alternative Processing buffers to optimize GPU performance  
