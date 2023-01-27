@@ -1,4 +1,4 @@
-# OCTSharp<img src="https://user-images.githubusercontent.com/109831624/215054645-12b3c536-b8a4-467f-bf94-95eb6615d4ef.png" width="50" height="50">
+# OCTSharp <img src="https://user-images.githubusercontent.com/109831624/215054645-12b3c536-b8a4-467f-bf94-95eb6615d4ef.png" width="70" height="70">
 
 With the advance of hardware technology, imaging speed of Optical Coherence Tomography
 (OCT) has reached hundreds of kHz for spectral domain OCT (SD-OCT) and it even breaks into MHz territory for swept source OCT.
