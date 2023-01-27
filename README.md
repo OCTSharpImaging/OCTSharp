@@ -44,8 +44,12 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   
   ## Example Camera Settings: Sensor Unlimited GL 2048 R (more avaliable in Camera files folder) 
   * Basic Timing
+  <img src="" width="800" height="400">
   * Advance Control
+   <img src="" width="800" height="400">
   * Externel Trigger
+   <img src="" width="800" height="400">
   * Image Buffer and ROI
+   <img src="" width="800" height="400">
   
   
