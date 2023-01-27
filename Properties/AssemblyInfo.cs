@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OCTCam")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("OCTSharp")]
+[assembly: AssemblyDescription("OCT Imaging software by Weihao Chen")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Miami University")]
-[assembly: AssemblyProduct("OCTCam")]
+[assembly: AssemblyProduct("OCTSharp")]
 [assembly: AssemblyCopyright("Copyright © University")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

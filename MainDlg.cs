@@ -32,6 +32,7 @@ using DALSA.SaperaLT.SapClassBasic;
 using System.Linq;
 using MathNet.Numerics;
 using System.Threading;
+using System.Windows.Controls;
 
 namespace OCTSharp
 {
@@ -100,6 +101,7 @@ namespace OCTSharp
         //*****************************************************************************************
         private bool CreateObjects()
         {
+            fpsFile = new StreamWriter(@"C:\Users\lamata\Desktop\FPS_Stats.txt");
             //update boolean variables
             bool success;
             if (enfaceBox.Checked)
@@ -139,7 +141,7 @@ namespace OCTSharp
             currRawNum = 0;
             postBufferidx = 0;            
             stepY = 2 * amp / (cNum - 1);
-            ScanArray = new double[2, tNum * (bNum + rNum)];
+            ScanArray = new double[2, tNum * (bNum + rNum)];           
             FbaseX = minXVolt;
             BbaseX = maxXVolt;
             amp = (double)amplitudeNumeric.Value;
@@ -153,7 +155,7 @@ namespace OCTSharp
             grayAdd = (float)AddBar.Value;
             cameraFilePath = cameraFilePathBox.Text;
             saveFilePath = SaveFilePathBox.Text;           
-
+            
             //shortCut
             //configFilePath = "D:\\CamFiles\\A_AVIIVA_M2-4010CL_12-bits.ccf";//E2V Camera
             //configFilePath = "D:\\CamFiles\\Octoplus_external_trigger_test.ccf";//Dalsa Camera
@@ -179,11 +181,11 @@ namespace OCTSharp
             if (isEnface)
             {
                 enFaceLineIndex = 0;
-                enFaceBuffer = new SapBuffer(1, bNum, cNum, SapFormat.Mono8, SapBuffer.MemoryType.ScatterGather);
-                enFaceBuffer.PixelDepth = 8;
-                success = enFaceBuffer.Create();
+                enFaceDispBuffer = new SapBuffer(1, bNum, cNum, SapFormat.Mono8, SapBuffer.MemoryType.ScatterGather);
+                enFaceDispBuffer.PixelDepth = 8;
+                success = enFaceDispBuffer.Create();
                 enfaceBox.Checked = true;
-                EnFaceView = new SapView(enFaceBuffer, pictureBox2);
+                EnFaceView = new SapView(enFaceDispBuffer, pictureBox2);
                 success = EnFaceView.Create();
 
                 float enFaceZoomHorz = (float)pictureBox2.Width / bNum;
@@ -191,14 +193,15 @@ namespace OCTSharp
                 EnFaceView.SetScalingMode(enFaceZoomHorz, enFaceZoomVert);
                 //EnFaceView.SetScalingMode(true);
             }
+     
 
             BScanView = new SapView(disBuffer, pictureBox1);
             success = BScanView.Create();
             float BScanZoomHorz = (float)pictureBox1.Width / bNum;
             float BScanHalfaNum = aNum / 2;
-            float BScanZoomVert = (float)2* pictureBox1.Height / BScanHalfaNum;//TODO: multiply factor is a magnification factor, make it adjustable
+            float BScanZoomVert = (float)2 * pictureBox1.Height / BScanHalfaNum;//TODO: multiply factor is a magnification factor, make it adjustable
             BScanView.SetScalingMode(BScanZoomHorz, BScanZoomVert);
-            //view.SetScalingMode(true);
+            //BScanView.SetScalingMode(true);
 
             //process constructor
             process = new ProcessClass(isCalib,
@@ -222,7 +225,7 @@ namespace OCTSharp
             transfer.Pairs[0].EventType = SapXferPair.XferEventType.EndOfFrame;//trrigger envent whenever one frame is avaliable            
             transfer.XferNotify += new SapXferNotifyHandler(SapTransfer_Xfernotify);//callback function for trigger event
             transfer.XferNotifyContext = this;
-            success = transfer.Create();          
+            success = transfer.Create();
 
             if (saveRawFileBox.Checked)
             {
@@ -230,23 +233,14 @@ namespace OCTSharp
                 rawBuffer = new SapBuffer(tNum, aNum, bNum, SapFormat.Mono16, SapBuffer.MemoryType.ScatterGather);
                 rawBuffer.PixelDepth = 12; //TODA: find its affect place
                 success = rawBuffer.Create();
-            }
-
-            if (SavePostFileBox.Checked)
-            {
-                //save 8-bit byte data in TIF file
-                postBuffer = new SapBuffer(tNum, bNum, aNum / 2, SapFormat.Mono8, SapBuffer.MemoryType.ScatterGather);
-                postBuffer.PixelDepth = 8; //TODA: find its affect place
-                success = postBuffer.Create();
-            }
+            }          
             #endregion                  
 
             #region UI setting
             //UI
-            //Chart initialization
+            //spectrum Chart initialization
             chart.Series.Clear();
-            chart.Series.Add("AScan");
-            SpectrumArray = new ushort[acqBuffer.Width];
+            spectrumSeries = chart.Series.Add("AScan");           
             chart.ChartAreas[0].AxisX.Title = "Pixel Location";
             chart.ChartAreas[0].AxisY.Title = "Signal Intensity";
             chart.ChartAreas[0].AxisX.Minimum = 0;//pixel min location
@@ -255,24 +249,32 @@ namespace OCTSharp
             chart.ChartAreas[0].AxisY.Maximum = 4096;//Pixel intensity max value;
             chart.Series["AScan"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
 
-            //Chart initialization
+            //fft Chart initialization
             chart1.Series.Clear();
-            chart1.Series.Add("FFT");
-            SpectrumArray = new ushort[acqBuffer.Width];
+            FFTSeries = chart1.Series.Add("FFT");
             chart1.ChartAreas[0].AxisX.Title = "FFT Points";
             chart1.ChartAreas[0].AxisY.Title = "FFT Intensity";
             chart1.ChartAreas[0].AxisX.Minimum = 0;//pixel min location
             chart1.ChartAreas[0].AxisX.Maximum = 1024;//pixel max location,buffer.Width or fftNum
             chart1.ChartAreas[0].AxisY.Minimum = 0;//Pixel intensity min value;
-            chart1.ChartAreas[0].AxisY.Maximum = 1200;//Pixel intensity max value;
+            chart1.ChartAreas[0].AxisY.Maximum = 7;//Pixel intensity max value;
             chart1.Series["FFT"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+
+            //fps Chart initialization
+            chart2.Series.Clear();
+            FPSSeries = chart2.Series.Add("FPS");
+            //chart2.ChartAreas[0].AxisY.Maximum = 200;
+            chart2.ChartAreas[0].AxisX.Title = "Elaspe Time";
+            chart2.ChartAreas[0].AxisY.Title = "FPS";
+            chart2.ChartAreas[0].AxisY.Interval = 25;
+            chart2.Series["FPS"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
             #endregion
             return true;
         }
 
         private void DestroyObjects()
         {
-            PreviewBotton.Enabled = true;           
+            ScanBotton.Enabled = true;           
             try
             {
                 if (transfer != null && transfer.Initialized)
@@ -292,9 +294,7 @@ namespace OCTSharp
                 if (disBuffer != null && acqBuffer.Initialized)
                     acqBuffer.Destroy();
                 
-                    
-                
-
+                                   
                 //Dispose
                 if (transfer != null) { transfer.Dispose(); transfer = null; };
                 if (BScanView != null) { BScanView.Dispose(); BScanView = null; }
@@ -306,6 +306,7 @@ namespace OCTSharp
                 if (process != null) { process.Dispose(); process = null; }
                 if (AOTask != null) { AOTask.Dispose(); AOTask = null; }
                 if (COTask != null) { COTask.Stop(); COTask.Dispose(); COTask = null; }
+                ScanArray = null;
             }
 
             catch (Exception x)//MX4 Exception error
@@ -323,13 +324,15 @@ namespace OCTSharp
         //IMAQ callback event
         public void SapTransfer_Xfernotify(object sender, SapXferNotifyEventArgs args)
         {
-            MainDlg main = args.Context as MainDlg;
+            MainDlg main = args.Context as MainDlg;       
+            
             if (process != null && process.Initialized)
-
-                if (isEnface || isSpecVar)
-                    main.process.ExecuteNext();//process buffer sequentially                                  
-                else
-                    main.process.Execute(); //process latest buffer      
+            {
+                //if (isEnface || isSpecVar)
+                    //main.process.ExecuteNext();//process buffer sequentially                                  
+                //else
+                    main.process.Execute(); //process latest buffer  
+            }           
 
             if (saveRawFileBox.Checked)
             {
@@ -342,110 +345,109 @@ namespace OCTSharp
                 else
                     currRawNum = 1;
             }
+
+            //Acquisition Rate Undate
+            //acqwatch.Stop();         
+            //if (acqwatch.Elapsed.Milliseconds != 0)
+            //   acqRate = 1000 / acqwatch.Elapsed.Milliseconds;                           
+            //acqwatch.Restart();
+
+            
         }
 
         public void processingCallback(object sender, SapProcessingDoneEventArgs pInfo)
         {
-            ProcessClass currProcess = sender as ProcessClass;           
+            //GC.Collect(); //GC test
+            ProcessClass currProcess = sender as ProcessClass;
+
             //Access Pointer for Display Buffer 
             unsafe
             {
                 //Copy processed B-Scan to display buffer
                 IntPtr b = currProcess.h_byteBuffer.PinnedHostPointer;
                 disBuffer.Write(0, currProcess.h_byteBuffer.Size, b);
-                BScanView.Show();
+                BScanView.Show();//update BScan on Display           
 
                 //Copy processed Enface Line to display buffer
-                if (isEnface && fNum==1)//TODO:special case when fNum!=1
+                if (isEnface && fNum == 1)//TODO:special case when fNum!=1
                 {
                     IntPtr e = currProcess.h_enFaceBuffer.PinnedHostPointer;
-                    enFaceBuffer.Write(enFaceLineIndex * bNum, currProcess.h_enFaceBuffer.Size, e);
+                    enFaceDispBuffer.Write(enFaceLineIndex * bNum, currProcess.h_enFaceBuffer.Size, e);
                     EnFaceView.Show();
                     enFaceLineIndex++;
                     if (enFaceLineIndex == cNum)
                         enFaceLineIndex = 0;
+
                 }
                 //Angiography enface view
                 if (isEnface && fNum == 2)
-                {                  
+                {
                     if (enFaceLineIndex % 2 == 0)//copy to display buffer when it is odd frame
                     {
                         IntPtr e = currProcess.h_enFaceBuffer.PinnedHostPointer;
-                        enFaceBuffer.Write(enFaceLineIndex/2 * bNum, currProcess.h_enFaceBuffer.Size, e);
+                        enFaceDispBuffer.Write(enFaceLineIndex / 2 * bNum, currProcess.h_enFaceBuffer.Size, e);
                         EnFaceView.Show();
                     }
                     enFaceLineIndex++;
                     if (enFaceLineIndex == tNum)
-                        enFaceLineIndex = 0;                                    
+                        enFaceLineIndex = 0;
                 }
-            }         
-
-            if (SavePostFileBox.Checked)
-            {
-                //Save Post Processed Image
-                if (postBufferidx < tNum)
-                {
-                    //copy current buffer to storage buffer
-                    postBuffer.Copy(disBuffer, 0, postBufferidx);
-                    postBufferidx++;
-                }
-                else
-                    postBufferidx = 1;
             }
 
             try
             {
-                //update UI Asynchronously
+                //update UI Asynchronously (on the main thread)
                 if (this.InvokeRequired && isScaning)
                 {//access main(UI) thread
                     this.BeginInvoke((MethodInvoker)delegate
                     {
-                        ////Ascan spectrum plot
-                        //chart.Series.Clear();
-                        //chart.Series.Add("AScan");
-                        //chart.Series["AScan"].ChartType = SeriesChartType.FastLine;
-                        //// 16-bit AScan spectrum
-                        //ushort[] spectrum = currProcess.h_ushortBuffer;
-                        //for (int i = 0; i < 2048; i++)
-                        //{
-                        //    chart.Series["AScan"].Points.AddY(spectrum[i]);//ascan spectrum (first pixel) TODO: fix runtime error when clcik END                      
-                        //}
+                        if (SpectrumBox.Checked)
+                        {
+                            //Ascan spectrum plot                       
+                            ushort[] spectrum = currProcess.h_ushortBuffer;
+                            for (int i = 0; i < 2048; i++)
+                            {
+                                chart.Series["AScan"].Points.AddY(spectrum[i]);//ascan spectrum (first pixel) TODO: fix runtime error when clcik END                      
+                            }
+                        }
 
-                        ////dfs plot
-                        //chart1.Series.Clear();
-                        //chart1.Series.Add("FFT");
-                        //chart1.Series["FFT"].ChartType = SeriesChartType.FastLine;
-                        //dfs = currProcess.h_floatDfs;
-                        //for (int i = 0; i < dfs.Length; i++)
-                        //{
-                        //    if (dfs[i] > chart1.ChartAreas[0].AxisY.Minimum)
-                        //        chart1.Series["FFT"].Points.AddY(dfs[i]);
-                        //}
+                        if (FFTBox.Checked)
+                        {
+                            //FFT spectrum plot
+                            float[] modulus = currProcess.h_modulusBuffer;//32-bit fft spectrum
+                            for (int i = 0; i < 1024; i++)
+                            {
+                                chart1.Series["FFT"].Points.AddY(Math.Log10(modulus[i]));//fft spectrum (first pixel)                 
+                            }
 
-                        ////FFT spectrum plot
-                        //chart1.Series.Clear();
-                        //chart1.Series.Add("FFT");
-                        //chart1.Series["FFT"].ChartType = SeriesChartType.FastLine;
-                        //float[] modulus = currProcess.h_modulusBuffer;//32-bit fft spectrum
+                            ////dfs plot
+                            //dfs = currProcess.h_floatDfs;
+                            //for (int i = 0; i < dfs.Length; i++)
+                            //{
+                            //    if (dfs[i] > chart1.ChartAreas[0].AxisY.Minimum)
+                            //        chart1.Series["FFT"].Points.AddY(dfs[i]);
+                            //}
+                        }
 
-                        //for (int i = 0; i < 1024; i++)
-                        //{
-                        //    chart1.Series["FFT"].Points.AddY(modulus[i]);//fft spectrum (first pixel)                 
-                        //}
-
-                        //log info
+                        //Acquisition Rate 
+                        if (transfer != null)
+                            AcqRateLabel.Text = transfer.FrameRateStatistics.LiveFrameRate.ToString();
+                        //Process Rate
                         if (process != null)
                         {
-                            float processTime = currProcess.Time;                            
-                            int fps = 1000 / (int)(0.0067f* bNum + processTime);//0.0067ms is measured unit time of X-arm base point at 147724Hz acquisition
-                            ProcessBufferTimeLabel.Text = fps.ToString();//TODO: fix runtime error when clcik END
-                            //ProcessBufferTimeLabel.Text = this.transfer.FrameRateStatistics.LiveFrameRate.ToString();
-                            //ProcessBufferTimeLabel.Text = enFaceLineIndex.ToString();//display the current enface index 
+                            float processRate = 1000 / currProcess.Time;
+                            fpsFile.WriteLine(processRate.ToString());
+                            //float processRate = currProcess.Time;
+                            processRateLabel.Text = processRate.ToString();
+                            if (FPSBox.Checked)
+                                chart2.Series["FPS"].Points.AddY(processRate);
                         }
-                        else
-                        {
-                            currProcess.destroyCuda();
-                        }
+
+                        //Display Rate
+                        if (BScanView != null)
+                            DisplayRateLabel.Text = BScanView.Display.RefreshRate.ToString();
+
+
                         //grayscale adjustment
                         currProcess.setMax((float)MaxBar.Value);
                         currProcess.setMin((float)MinBar.Value);
@@ -467,7 +469,7 @@ namespace OCTSharp
             transfer.Wait(3000);
             transfer.Freeze();
             SaveImage();
-            EndButton.PerformClick();
+            StopButton.PerformClick();
         }
 
         #region Control Button
@@ -532,7 +534,7 @@ namespace OCTSharp
             COTask.COChannels.CreatePulseChannelTicks(counterTer,
                                                           "GateCounter", "/Dev1/ao/SampleClock",
                                                           COPulseIdleState.Low,
-                                                          0,
+                                                          30,
                                                           rNum,
                                                           bNum);
             COTask.Timing.ConfigureImplicit(SampleQuantityMode.ContinuousSamples, tNum * (bNum + rNum));
@@ -612,7 +614,7 @@ namespace OCTSharp
             if (isScaning == true)
                 DestroyObjects();
             isScaning = false;
-            ScanSaveButton.Enabled = true;
+            SaveButton.Enabled = true;
             PreviewMode = false;
             SaveCScanMode = false;
             //pictureBox1.Refresh();
@@ -650,7 +652,8 @@ namespace OCTSharp
             string CalibrationFilePath;
             //Get the path of calibration excel file (in row)
             //CalibrationFilePath = openFileDialog1.FileName;
-            string calibPath = Application.StartupPath + "\\CalibrationCurve.xlsx";
+            //string calibPath = Application.StartupPath + "\\CalibrationCurve.xlsx";//debug default path
+            string calibPath = @"D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Debug\CalibrationCurve.xlsx";
             Excel.Application xls = new Excel.Application();
             Excel.Workbook workbook = xls.Workbooks.Open(calibPath);
             Excel.Worksheet worksheet = workbook.Sheets[1];
@@ -763,9 +766,9 @@ namespace OCTSharp
         private void AcquireImages()
         {
             //button
-            PreviewBotton.Enabled = false;
-            ScanSaveButton.Enabled = false;
-            EndButton.Enabled = true;
+            ScanBotton.Enabled = false;
+            SaveButton.Enabled = false;
+            StopButton.Enabled = true;
             try
             {
                 bool success;
@@ -936,41 +939,33 @@ namespace OCTSharp
                     stream.Close();
                     file.Close();
                     RawFilePathNum++;
-                }
-            }
-
-            if (SavePostFileBox.Checked)
-            {
-                //save 8-bit byte data in TIF file
-                unsafe
-                {
-                    long length = postBuffer.Height * postBuffer.Width * postBuffer.BytesPerPixel;//one frame length
-                    System.IntPtr address;
-                    postBuffer.GetAddress(0, out address);
-                    UnmanagedMemoryStream stream = new UnmanagedMemoryStream((byte*)address, length);
-                    PostFilePath = saveFilePath + "\\PostBuffer" + PostFilePathNum + ".tiff";
-                    FileStream file = new FileStream(PostFilePath, FileMode.Append, FileAccess.Write);
-
-                    //loop through buffer and save all b-Scan
-                    for (int i = 0; i < postBuffer.Count; i++)
-                    {
-                        postBuffer.GetAddress(i, out address);
-                        stream = new UnmanagedMemoryStream((byte*)address, length);
-                        stream.CopyTo(file);
-                    }
-                    stream.Close();
-                    file.Close();
-                    PostFilePathNum++;
-                }
+                }                  
             }
             DestroyObjects();
         }
-     
+
 
         private void bNumBox_ValueChanged(object sender, EventArgs e)
         {
-            bNum = (int)Pow(2, Ceiling(Log(int.Parse(bNumBox.Text)) / Log(2)));
-            bNumBox.Text = bNum.ToString();
+            //round to nearest power of two (fft is more efficient)
+            //bNum = (int)Pow(2, Ceiling(Log(int.Parse(bNumBox.Text)) / Log(2)));
+            //bNumBox.Text = bNum.ToString();
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+            FPSSeries.Points.Clear();
+        }
+
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+           OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Raw Files|(*.raw)|All files (*.*)";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                openFileName = openFileDialog.FileName;
+
+            SapBuffer loadBuffer = new SapBuffer(openFileName, SapBuffer.MemoryType.ScatterGather);
         }
     }
 }

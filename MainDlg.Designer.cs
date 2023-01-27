@@ -3,7 +3,9 @@ using ManagedCuda.CudaBlas;
 using NationalInstruments.DAQmx;
 using System;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Diagnostics;
+using System.IO;
 
 namespace OCTSharp
 {
@@ -23,10 +25,13 @@ namespace OCTSharp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDlg));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.physicalChannelComboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,15 +45,15 @@ namespace OCTSharp
             this.amplitudeNumeric = new System.Windows.Forms.NumericUpDown();
             this.CameraLineRateBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.PreviewBotton = new System.Windows.Forms.Button();
+            this.ScanBotton = new System.Windows.Forms.Button();
             this.Camera = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.cameraFilePathBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.counterBox = new System.Windows.Forms.TextBox();
-            this.ScanSaveButton = new System.Windows.Forms.Button();
-            this.EndButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.StopButton = new System.Windows.Forms.Button();
             this.SaveFilePathBox = new System.Windows.Forms.TextBox();
             this.browseWriteButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -72,7 +77,7 @@ namespace OCTSharp
             this.folderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.CalibrationButton = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.ProcessBufferTimeLabel = new System.Windows.Forms.Label();
+            this.AcqRateLabel = new System.Windows.Forms.Label();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -88,7 +93,6 @@ namespace OCTSharp
             this.label24 = new System.Windows.Forms.Label();
             this.AddBar = new System.Windows.Forms.TrackBar();
             this.saveRawFileBox = new System.Windows.Forms.CheckBox();
-            this.SavePostFileBox = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.calibrationBox = new System.Windows.Forms.CheckBox();
             this.ModifyCalibCurveBtn = new System.Windows.Forms.Button();
@@ -107,6 +111,9 @@ namespace OCTSharp
             this.MinBarText = new System.Windows.Forms.Label();
             this.MaxBarText = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.FPSBox = new System.Windows.Forms.CheckBox();
+            this.FFTBox = new System.Windows.Forms.CheckBox();
+            this.SpectrumBox = new System.Windows.Forms.CheckBox();
             this.enfaceBox = new System.Windows.Forms.CheckBox();
             this.SpecVarBox = new System.Windows.Forms.CheckBox();
             this.AvgNumBox = new System.Windows.Forms.NumericUpDown();
@@ -115,6 +122,14 @@ namespace OCTSharp
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.processRateLabel = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.LoadProcessButton = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.BenchmarkLog = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.DisplayRateLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amplitudeNumeric)).BeginInit();
             this.Camera.SuspendLayout();
@@ -138,6 +153,9 @@ namespace OCTSharp
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvgNumBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            this.BenchmarkLog.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -187,7 +205,7 @@ namespace OCTSharp
             this.maxVolBox.Name = "maxVolBox";
             this.maxVolBox.Size = new System.Drawing.Size(180, 26);
             this.maxVolBox.TabIndex = 5;
-            this.maxVolBox.Text = "2";
+            this.maxVolBox.Text = "1.5";
             // 
             // minVolBox
             // 
@@ -196,7 +214,7 @@ namespace OCTSharp
             this.minVolBox.Name = "minVolBox";
             this.minVolBox.Size = new System.Drawing.Size(180, 26);
             this.minVolBox.TabIndex = 4;
-            this.minVolBox.Text = "-2";
+            this.minVolBox.Text = "-1.5";
             // 
             // label3
             // 
@@ -271,7 +289,7 @@ namespace OCTSharp
             this.amplitudeNumeric.Size = new System.Drawing.Size(182, 26);
             this.amplitudeNumeric.TabIndex = 7;
             this.amplitudeNumeric.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});
@@ -295,16 +313,16 @@ namespace OCTSharp
             this.label4.TabIndex = 4;
             this.label4.Text = "Line Rate (Hz)";
             // 
-            // PreviewBotton
+            // ScanBotton
             // 
-            this.PreviewBotton.Location = new System.Drawing.Point(45, 1628);
-            this.PreviewBotton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PreviewBotton.Name = "PreviewBotton";
-            this.PreviewBotton.Size = new System.Drawing.Size(312, 52);
-            this.PreviewBotton.TabIndex = 2;
-            this.PreviewBotton.Text = "LIVE";
-            this.PreviewBotton.UseVisualStyleBackColor = true;
-            this.PreviewBotton.Click += new System.EventHandler(this.PreviewBotton_Click);
+            this.ScanBotton.Location = new System.Drawing.Point(3153, 78);
+            this.ScanBotton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ScanBotton.Name = "ScanBotton";
+            this.ScanBotton.Size = new System.Drawing.Size(594, 52);
+            this.ScanBotton.TabIndex = 2;
+            this.ScanBotton.Text = "Scan";
+            this.ScanBotton.UseVisualStyleBackColor = true;
+            this.ScanBotton.Click += new System.EventHandler(this.PreviewBotton_Click);
             // 
             // Camera
             // 
@@ -373,27 +391,27 @@ namespace OCTSharp
             this.counterBox.TabIndex = 13;
             this.counterBox.Text = "/Dev1/ctr0";
             // 
-            // ScanSaveButton
+            // SaveButton
             // 
-            this.ScanSaveButton.Location = new System.Drawing.Point(46, 1748);
-            this.ScanSaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ScanSaveButton.Name = "ScanSaveButton";
-            this.ScanSaveButton.Size = new System.Drawing.Size(312, 48);
-            this.ScanSaveButton.TabIndex = 16;
-            this.ScanSaveButton.Text = "SAVE";
-            this.ScanSaveButton.UseVisualStyleBackColor = true;
-            this.ScanSaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.SaveButton.Location = new System.Drawing.Point(3154, 198);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(594, 48);
+            this.SaveButton.TabIndex = 16;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // EndButton
+            // StopButton
             // 
-            this.EndButton.Location = new System.Drawing.Point(45, 1689);
-            this.EndButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EndButton.Name = "EndButton";
-            this.EndButton.Size = new System.Drawing.Size(312, 49);
-            this.EndButton.TabIndex = 17;
-            this.EndButton.Text = "STOP";
-            this.EndButton.UseVisualStyleBackColor = true;
-            this.EndButton.Click += new System.EventHandler(this.EndButton_Click);
+            this.StopButton.Location = new System.Drawing.Point(3153, 140);
+            this.StopButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(594, 49);
+            this.StopButton.TabIndex = 17;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // SaveFilePathBox
             // 
@@ -402,7 +420,6 @@ namespace OCTSharp
             this.SaveFilePathBox.Name = "SaveFilePathBox";
             this.SaveFilePathBox.Size = new System.Drawing.Size(198, 26);
             this.SaveFilePathBox.TabIndex = 18;
-            this.SaveFilePathBox.Text = "C:\\Desktop";
             // 
             // browseWriteButton
             // 
@@ -501,7 +518,7 @@ namespace OCTSharp
             this.rNumBox.Size = new System.Drawing.Size(170, 26);
             this.rNumBox.TabIndex = 27;
             this.rNumBox.Value = new decimal(new int[] {
-            5000,
+            150,
             0,
             0,
             0});
@@ -534,7 +551,7 @@ namespace OCTSharp
             this.fNumBox.Size = new System.Drawing.Size(170, 26);
             this.fNumBox.TabIndex = 25;
             this.fNumBox.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});
@@ -612,12 +629,12 @@ namespace OCTSharp
             this.bNumBox.Location = new System.Drawing.Point(172, 125);
             this.bNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bNumBox.Maximum = new decimal(new int[] {
-            8192,
+            100000,
             0,
             0,
             0});
             this.bNumBox.Minimum = new decimal(new int[] {
-            64,
+            1,
             0,
             0,
             0});
@@ -636,7 +653,7 @@ namespace OCTSharp
             this.cNumBox.Location = new System.Drawing.Point(172, 172);
             this.cNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cNumBox.Maximum = new decimal(new int[] {
-            10000,
+            10000000,
             0,
             0,
             0});
@@ -649,7 +666,7 @@ namespace OCTSharp
             this.cNumBox.Size = new System.Drawing.Size(170, 26);
             this.cNumBox.TabIndex = 9;
             this.cNumBox.Value = new decimal(new int[] {
-            128,
+            1,
             0,
             0,
             0});
@@ -699,41 +716,41 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1924, 802);
+            this.label17.Location = new System.Drawing.Point(16, 45);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 20);
+            this.label17.Size = new System.Drawing.Size(213, 20);
             this.label17.TabIndex = 31;
-            this.label17.Text = "FPS:";
+            this.label17.Text = "Acquisition Frame Rate (Hz):";
             // 
-            // ProcessBufferTimeLabel
+            // AcqRateLabel
             // 
-            this.ProcessBufferTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AcqRateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProcessBufferTimeLabel.AutoSize = true;
-            this.ProcessBufferTimeLabel.Location = new System.Drawing.Point(1962, 802);
-            this.ProcessBufferTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ProcessBufferTimeLabel.Name = "ProcessBufferTimeLabel";
-            this.ProcessBufferTimeLabel.Size = new System.Drawing.Size(18, 20);
-            this.ProcessBufferTimeLabel.TabIndex = 32;
-            this.ProcessBufferTimeLabel.Text = "0";
+            this.AcqRateLabel.AutoSize = true;
+            this.AcqRateLabel.Location = new System.Drawing.Point(230, 45);
+            this.AcqRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AcqRateLabel.Name = "AcqRateLabel";
+            this.AcqRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.AcqRateLabel.TabIndex = 32;
+            this.AcqRateLabel.Text = "0";
             // 
             // chart
             // 
             this.chart.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.chart.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
-            chartArea3.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
             this.chart.Location = new System.Drawing.Point(2014, 31);
             this.chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart.Name = "chart";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.IsVisibleInLegend = false;
-            series3.Name = "spectrum";
-            series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            this.chart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.IsVisibleInLegend = false;
+            series1.Name = "spectrum";
+            series1.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart.Series.Add(series1);
             this.chart.Size = new System.Drawing.Size(1098, 769);
             this.chart.TabIndex = 33;
             this.chart.Text = "chart";
@@ -753,17 +770,17 @@ namespace OCTSharp
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.chart1.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Location = new System.Drawing.Point(2014, 809);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.IsVisibleInLegend = false;
-            series4.Name = "spectrum";
-            series4.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            this.chart1.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.IsVisibleInLegend = false;
+            series2.Name = "spectrum";
+            series2.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1108, 820);
             this.chart1.TabIndex = 35;
             this.chart1.Text = "chart1";
@@ -782,19 +799,19 @@ namespace OCTSharp
             this.MaxBar.Maximum = 255;
             this.MaxBar.Minimum = 100;
             this.MaxBar.Name = "MaxBar";
-            this.MaxBar.Size = new System.Drawing.Size(304, 69);
+            this.MaxBar.Size = new System.Drawing.Size(507, 69);
             this.MaxBar.TabIndex = 38;
             this.MaxBar.Value = 255;
             this.MaxBar.Scroll += new System.EventHandler(this.MaxBar_Scroll);
             // 
             // MinBar
             // 
-            this.MinBar.Location = new System.Drawing.Point(424, 28);
+            this.MinBar.Location = new System.Drawing.Point(54, 111);
             this.MinBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinBar.Maximum = 100;
             this.MinBar.Minimum = 1;
             this.MinBar.Name = "MinBar";
-            this.MinBar.Size = new System.Drawing.Size(308, 69);
+            this.MinBar.Size = new System.Drawing.Size(510, 69);
             this.MinBar.TabIndex = 39;
             this.MinBar.Value = 1;
             this.MinBar.Scroll += new System.EventHandler(this.MinBar_Scroll);
@@ -812,7 +829,7 @@ namespace OCTSharp
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(388, 35);
+            this.label20.Location = new System.Drawing.Point(18, 118);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(34, 20);
@@ -822,7 +839,7 @@ namespace OCTSharp
             // MulBarText
             // 
             this.MulBarText.AutoSize = true;
-            this.MulBarText.Location = new System.Drawing.Point(776, 51);
+            this.MulBarText.Location = new System.Drawing.Point(18, 234);
             this.MulBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MulBarText.Name = "MulBarText";
             this.MulBarText.Size = new System.Drawing.Size(45, 20);
@@ -832,7 +849,7 @@ namespace OCTSharp
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(782, 31);
+            this.label23.Location = new System.Drawing.Point(24, 214);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(34, 20);
@@ -842,12 +859,12 @@ namespace OCTSharp
             // MulBar
             // 
             this.MulBar.LargeChange = 100;
-            this.MulBar.Location = new System.Drawing.Point(828, 28);
+            this.MulBar.Location = new System.Drawing.Point(70, 211);
             this.MulBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MulBar.Maximum = 2500;
             this.MulBar.Minimum = 1;
             this.MulBar.Name = "MulBar";
-            this.MulBar.Size = new System.Drawing.Size(291, 69);
+            this.MulBar.Size = new System.Drawing.Size(494, 69);
             this.MulBar.TabIndex = 257;
             this.MulBar.Value = 1000;
             this.MulBar.Scroll += new System.EventHandler(this.MulBar_Scroll);
@@ -855,7 +872,7 @@ namespace OCTSharp
             // AddBarText
             // 
             this.AddBarText.AutoSize = true;
-            this.AddBarText.Location = new System.Drawing.Point(1176, 51);
+            this.AddBarText.Location = new System.Drawing.Point(21, 325);
             this.AddBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AddBarText.Name = "AddBarText";
             this.AddBarText.Size = new System.Drawing.Size(31, 20);
@@ -866,7 +883,7 @@ namespace OCTSharp
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(1176, 31);
+            this.label24.Location = new System.Drawing.Point(21, 305);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(38, 20);
@@ -875,35 +892,24 @@ namespace OCTSharp
             // 
             // AddBar
             // 
-            this.AddBar.Location = new System.Drawing.Point(1226, 28);
+            this.AddBar.Location = new System.Drawing.Point(70, 302);
             this.AddBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddBar.Maximum = 100;
             this.AddBar.Name = "AddBar";
-            this.AddBar.Size = new System.Drawing.Size(249, 69);
+            this.AddBar.Size = new System.Drawing.Size(494, 69);
             this.AddBar.TabIndex = 260;
             this.AddBar.Scroll += new System.EventHandler(this.AddBar_Scroll);
             // 
             // saveRawFileBox
             // 
             this.saveRawFileBox.AutoSize = true;
-            this.saveRawFileBox.Location = new System.Drawing.Point(112, 29);
+            this.saveRawFileBox.Location = new System.Drawing.Point(16, 29);
             this.saveRawFileBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveRawFileBox.Name = "saveRawFileBox";
-            this.saveRawFileBox.Size = new System.Drawing.Size(67, 24);
+            this.saveRawFileBox.Size = new System.Drawing.Size(140, 24);
             this.saveRawFileBox.TabIndex = 263;
-            this.saveRawFileBox.Text = "Raw";
+            this.saveRawFileBox.Text = "Save .Raw File";
             this.saveRawFileBox.UseVisualStyleBackColor = true;
-            // 
-            // SavePostFileBox
-            // 
-            this.SavePostFileBox.AutoSize = true;
-            this.SavePostFileBox.Location = new System.Drawing.Point(228, 29);
-            this.SavePostFileBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SavePostFileBox.Name = "SavePostFileBox";
-            this.SavePostFileBox.Size = new System.Drawing.Size(67, 24);
-            this.SavePostFileBox.TabIndex = 264;
-            this.SavePostFileBox.Text = "Post";
-            this.SavePostFileBox.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -1050,7 +1056,6 @@ namespace OCTSharp
             // 
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.SaveFilePathBox);
-            this.groupBox5.Controls.Add(this.SavePostFileBox);
             this.groupBox5.Controls.Add(this.saveRawFileBox);
             this.groupBox5.Controls.Add(this.browseWriteButton);
             this.groupBox5.Location = new System.Drawing.Point(26, 982);
@@ -1076,11 +1081,11 @@ namespace OCTSharp
             this.groupBox6.Controls.Add(this.label24);
             this.groupBox6.Controls.Add(this.MulBarText);
             this.groupBox6.Controls.Add(this.AddBar);
-            this.groupBox6.Location = new System.Drawing.Point(482, 1660);
+            this.groupBox6.Location = new System.Drawing.Point(3153, 298);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(1500, 112);
+            this.groupBox6.Size = new System.Drawing.Size(594, 405);
             this.groupBox6.TabIndex = 266;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Contrast";
@@ -1088,7 +1093,7 @@ namespace OCTSharp
             // MinBarText
             // 
             this.MinBarText.AutoSize = true;
-            this.MinBarText.Location = new System.Drawing.Point(396, 60);
+            this.MinBarText.Location = new System.Drawing.Point(26, 143);
             this.MinBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MinBarText.Name = "MinBarText";
             this.MinBarText.Size = new System.Drawing.Size(18, 20);
@@ -1107,6 +1112,9 @@ namespace OCTSharp
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.FPSBox);
+            this.groupBox7.Controls.Add(this.FFTBox);
+            this.groupBox7.Controls.Add(this.SpectrumBox);
             this.groupBox7.Controls.Add(this.enfaceBox);
             this.groupBox7.Controls.Add(this.SpecVarBox);
             this.groupBox7.Controls.Add(this.AvgNumBox);
@@ -1114,16 +1122,47 @@ namespace OCTSharp
             this.groupBox7.Controls.Add(this.AvgBox);
             this.groupBox7.Location = new System.Drawing.Point(26, 1478);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(369, 126);
+            this.groupBox7.Size = new System.Drawing.Size(369, 151);
             this.groupBox7.TabIndex = 267;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Display";
             // 
+            // FPSBox
+            // 
+            this.FPSBox.AutoSize = true;
+            this.FPSBox.Location = new System.Drawing.Point(159, 57);
+            this.FPSBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FPSBox.Name = "FPSBox";
+            this.FPSBox.Size = new System.Drawing.Size(109, 24);
+            this.FPSBox.TabIndex = 272;
+            this.FPSBox.Text = "FPS Chart";
+            this.FPSBox.UseVisualStyleBackColor = true;
+            // 
+            // FFTBox
+            // 
+            this.FFTBox.AutoSize = true;
+            this.FFTBox.Location = new System.Drawing.Point(159, 28);
+            this.FFTBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FFTBox.Name = "FFTBox";
+            this.FFTBox.Size = new System.Drawing.Size(107, 24);
+            this.FFTBox.TabIndex = 271;
+            this.FFTBox.Text = "FFT Chart";
+            this.FFTBox.UseVisualStyleBackColor = true;
+            // 
+            // SpectrumBox
+            // 
+            this.SpectrumBox.AutoSize = true;
+            this.SpectrumBox.Location = new System.Drawing.Point(9, 28);
+            this.SpectrumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SpectrumBox.Name = "SpectrumBox";
+            this.SpectrumBox.Size = new System.Drawing.Size(138, 24);
+            this.SpectrumBox.TabIndex = 270;
+            this.SpectrumBox.Text = "Spctrum Chart";
+            this.SpectrumBox.UseVisualStyleBackColor = true;
+            // 
             // enfaceBox
             // 
             this.enfaceBox.AutoSize = true;
-            this.enfaceBox.Checked = true;
-            this.enfaceBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.enfaceBox.Location = new System.Drawing.Point(10, 88);
             this.enfaceBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.enfaceBox.Name = "enfaceBox";
@@ -1135,19 +1174,17 @@ namespace OCTSharp
             // SpecVarBox
             // 
             this.SpecVarBox.AutoSize = true;
-            this.SpecVarBox.Checked = true;
-            this.SpecVarBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SpecVarBox.Location = new System.Drawing.Point(10, 57);
             this.SpecVarBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SpecVarBox.Name = "SpecVarBox";
-            this.SpecVarBox.Size = new System.Drawing.Size(140, 24);
+            this.SpecVarBox.Size = new System.Drawing.Size(147, 24);
             this.SpecVarBox.TabIndex = 268;
-            this.SpecVarBox.Text = "Enable Variant";
+            this.SpecVarBox.Text = "Speckle Variant";
             this.SpecVarBox.UseVisualStyleBackColor = true;
             // 
             // AvgNumBox
             // 
-            this.AvgNumBox.Location = new System.Drawing.Point(164, 28);
+            this.AvgNumBox.Location = new System.Drawing.Point(135, 112);
             this.AvgNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AvgNumBox.Maximum = new decimal(new int[] {
             10000,
@@ -1171,7 +1208,7 @@ namespace OCTSharp
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(236, 31);
+            this.label25.Location = new System.Drawing.Point(198, 117);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(126, 20);
@@ -1181,7 +1218,7 @@ namespace OCTSharp
             // AvgBox
             // 
             this.AvgBox.AutoSize = true;
-            this.AvgBox.Location = new System.Drawing.Point(10, 28);
+            this.AvgBox.Location = new System.Drawing.Point(10, 115);
             this.AvgBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AvgBox.Name = "AvgBox";
             this.AvgBox.Size = new System.Drawing.Size(116, 24);
@@ -1226,37 +1263,149 @@ namespace OCTSharp
             this.label27.TabIndex = 270;
             this.label27.Text = "En-Face Window";
             // 
+            // processRateLabel
+            // 
+            this.processRateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.processRateLabel.AutoSize = true;
+            this.processRateLabel.Location = new System.Drawing.Point(230, 82);
+            this.processRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.processRateLabel.Name = "processRateLabel";
+            this.processRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.processRateLabel.TabIndex = 272;
+            this.processRateLabel.Text = "0";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(16, 82);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(214, 20);
+            this.label30.TabIndex = 271;
+            this.label30.Text = "Processing Frame Rate (Hz):";
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.chart2.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            this.chart2.Location = new System.Drawing.Point(22, 151);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chart2.Name = "chart2";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.IsVisibleInLegend = false;
+            series3.Name = "spectrum";
+            series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(520, 518);
+            this.chart2.TabIndex = 273;
+            this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
+            // 
+            // LoadProcessButton
+            // 
+            this.LoadProcessButton.Location = new System.Drawing.Point(148, 58);
+            this.LoadProcessButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LoadProcessButton.Name = "LoadProcessButton";
+            this.LoadProcessButton.Size = new System.Drawing.Size(312, 48);
+            this.LoadProcessButton.TabIndex = 274;
+            this.LoadProcessButton.Text = "Load && Process";
+            this.LoadProcessButton.UseVisualStyleBackColor = true;
+            this.LoadProcessButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.LoadProcessButton);
+            this.groupBox8.Location = new System.Drawing.Point(3153, 1448);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Size = new System.Drawing.Size(594, 145);
+            this.groupBox8.TabIndex = 275;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Post-Processing";
+            // 
+            // BenchmarkLog
+            // 
+            this.BenchmarkLog.Controls.Add(this.label29);
+            this.BenchmarkLog.Controls.Add(this.DisplayRateLabel);
+            this.BenchmarkLog.Controls.Add(this.chart2);
+            this.BenchmarkLog.Controls.Add(this.label30);
+            this.BenchmarkLog.Controls.Add(this.label17);
+            this.BenchmarkLog.Controls.Add(this.AcqRateLabel);
+            this.BenchmarkLog.Controls.Add(this.processRateLabel);
+            this.BenchmarkLog.Location = new System.Drawing.Point(3153, 711);
+            this.BenchmarkLog.Name = "BenchmarkLog";
+            this.BenchmarkLog.Size = new System.Drawing.Size(594, 695);
+            this.BenchmarkLog.TabIndex = 276;
+            this.BenchmarkLog.TabStop = false;
+            this.BenchmarkLog.Text = "Benchmark";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(16, 126);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(198, 20);
+            this.label29.TabIndex = 274;
+            this.label29.Text = "Display Frame Rate (FPS):";
+            // 
+            // DisplayRateLabel
+            // 
+            this.DisplayRateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DisplayRateLabel.AutoSize = true;
+            this.DisplayRateLabel.Location = new System.Drawing.Point(222, 126);
+            this.DisplayRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DisplayRateLabel.Name = "DisplayRateLabel";
+            this.DisplayRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.DisplayRateLabel.TabIndex = 275;
+            this.DisplayRateLabel.Text = "0";
+            // 
             // MainDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(3269, 1818);
+            this.ClientSize = new System.Drawing.Size(3804, 1753);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.BenchmarkLog);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.ProcessBufferTimeLabel);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.ScanSaveButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.EndButton);
+            this.Controls.Add(this.StopButton);
             this.Controls.Add(this.Camera);
-            this.Controls.Add(this.PreviewBotton);
+            this.Controls.Add(this.ScanBotton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chart);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainDlg";
-            this.Text = "OCTSharp v1.4.6";
+            this.Text = "OCTSharp v1.4.8";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amplitudeNumeric)).EndInit();
@@ -1288,6 +1437,10 @@ namespace OCTSharp
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvgNumBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.BenchmarkLog.ResumeLayout(false);
+            this.BenchmarkLog.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1306,7 +1459,7 @@ namespace OCTSharp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CameraLineRateBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button PreviewBotton;
+        private System.Windows.Forms.Button ScanBotton;
         private System.Windows.Forms.GroupBox Camera;
         internal System.Windows.Forms.Label amplitudeLabel;
         internal System.Windows.Forms.NumericUpDown amplitudeNumeric;
@@ -1314,8 +1467,8 @@ namespace OCTSharp
         private Label label5;
         private Label label8;
         private TextBox counterBox;
-        private Button ScanSaveButton;
-        private Button EndButton;
+        private Button SaveButton;
+        private Button StopButton;
         private TextBox SaveFilePathBox;
         private Button browseWriteButton;
         private Label label10;
@@ -1367,18 +1520,21 @@ namespace OCTSharp
         //MX4
         private string cameraFilePath;
         private string saveFilePath;
+        private string openFileName;
         private SapAcquisition acq;
         private SapBuffer acqBuffer;
         private SapBuffer rawBuffer;
         private SapBuffer postBuffer;
         private SapBuffer disBuffer;
-        private SapBuffer enFaceBuffer;
+        private SapBuffer enFaceDispBuffer;
         private int pixelDepth;
         private SapTransfer transfer;
         private bool SaveCScanMode;
         private bool PreviewMode;
         private bool isScaning;
         private SapProcessing process;
+        public int acqRate;
+        public int FPS;
         private SapView BScanView;
         private SapView EnFaceView;
         private ProcessClass disprocess;
@@ -1409,9 +1565,11 @@ namespace OCTSharp
         private Button CalibrationButton;
         private GroupBox groupBox2;      
         private Label label17;
-        private Label ProcessBufferTimeLabel;
+        private Label AcqRateLabel;
+        private Series spectrumSeries;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private PictureBox pictureBox1;
+        private Series FFTSeries;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private VScrollBar vScrollBar1;
         private TrackBar MaxBar;
@@ -1427,7 +1585,6 @@ namespace OCTSharp
         private Label label24;
         private TrackBar AddBar;
         private CheckBox saveRawFileBox;
-        private CheckBox SavePostFileBox;
         private string RawFilePath;
         private int RawFilePathNum = 1;
         private string PostFilePath;
@@ -1460,5 +1617,18 @@ namespace OCTSharp
         private CheckBox enfaceBox;
         private NumericUpDown rNumBox;
         private Label label28;
+        private Label processRateLabel;
+        private Label label30;
+        private Series FPSSeries;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private CheckBox FPSBox;
+        private CheckBox FFTBox;
+        private CheckBox SpectrumBox;
+        private Button LoadProcessButton;
+        private GroupBox groupBox8;
+        private GroupBox BenchmarkLog;
+        private Label label29;
+        private Label DisplayRateLabel;
+        private StreamWriter fpsFile;
     }
 }

@@ -201,8 +201,9 @@ namespace OCTSharp
                 //==================cuda pipeline========================
                 ctx.SetCurrent();//set to current thread  
                 buffer.GetAddress(out h_bufferPtr);
-                h_lockbuffer.SynchronCopyToDevice(d_ushortBuffer.DevicePointer);
-                //d_ushortBuffer.CopyToHost(h_ushortBuffer);//16bit ascan spectrum
+                //h_lockbuffer.SynchronCopyToDevice(d_ushortBuffer.DevicePointer);
+                h_lockbuffer.AsyncCopyToDevice(d_ushortBuffer.DevicePointer,memcpyStream);
+                d_ushortBuffer.CopyToHost(h_ushortBuffer);//16bit ascan spectrum
 
                 //Input Cast
                 inputCastKernel.Run(d_fftBuffer.DevicePointer, d_ushortBuffer.DevicePointer, Buffer.PixelDepth, samplePerBScan);
@@ -277,7 +278,7 @@ namespace OCTSharp
 
                 //Calculate Modulus        
                 modulusKernel.Run(d_modulusBuffer.DevicePointer, d_fftBuffer.DevicePointer, width/2, samplePerBScan, Max, Min, Mul, Add);
-                //d_modulusBuffer.CopyToHost(h_modulusBuffer);//Check 32bit float fft magnitude
+                d_modulusBuffer.CopyToHost(h_modulusBuffer);//Check 32bit float fft magnitude
 
                 //flip all Bscan
                 cublas_handle.Geam(Operation.Transpose,
@@ -296,33 +297,33 @@ namespace OCTSharp
 
                 if (isEnface)
                 {
-                    ////Sum B-Scan with cublas
-                    //cublas_handle.Gemv(Operation.NonTranspose,
-                    //                  buffer.Height,//m
-                    //                  buffer.Width / 2,//n
-                    //                  floatAlpha,//alpha
-                    //                  d_flipBuffer,//A
-                    //                  buffer.Height,//lda
-                    //                  d_oneFloatArray,//x
-                    //                  1,//incx
-                    //                  floatBeta,//beta
-                    //                  d_floatEnFaceBuffer,//y
-                    //                  1//incy
-                    //                  );
-                    //DriverAPINativeMethods.Streams.cuStreamSynchronize(kernelStream);
+                    //Sum B-Scan with cublas
+                    cublas_handle.Gemv(Operation.NonTranspose,
+                                      buffer.Height,//m
+                                      buffer.Width / 2,//n
+                                      floatAlpha,//alpha
+                                      d_flipBuffer,//A
+                                      buffer.Height,//lda
+                                      d_oneFloatArray,//x
+                                      1,//incx
+                                      floatBeta,//beta
+                                      d_floatEnFaceBuffer,//y
+                                      1//incy
+                                      );
+                    DriverAPINativeMethods.Streams.cuStreamSynchronize(kernelStream);
 
-                    ////Output Cast                  
-                    //EnfaceOutputCastKernel.Run(d_byteEnFaceBuffer.DevicePointer, d_floatEnFaceBuffer.DevicePointer, Max, Min, Mul);
-                    //h_enFaceBuffer.SynchronCopyToHost(d_byteEnFaceBuffer.DevicePointer);
+                    //Output Cast                  
+                    EnfaceOutputCastKernel.Run(d_byteEnFaceBuffer.DevicePointer, d_floatEnFaceBuffer.DevicePointer, Max, Min, Mul);
+                    h_enFaceBuffer.SynchronCopyToHost(d_byteEnFaceBuffer.DevicePointer);
 
-                    ////Output Cast                  
-                    //BScanOutputCastKernel.Run(d_byteBuffer.DevicePointer, d_flipBuffer.DevicePointer, Max, Min, Mul);
-                    ////Copy to Host               
-                    //h_byteBuffer.SynchronCopyToHost(d_byteBuffer.DevicePointer);
+                    //Output Cast                  
+                    BScanOutputCastKernel.Run(d_byteBuffer.DevicePointer, d_flipBuffer.DevicePointer, Max, Min, Mul);
+                    //Copy to Host               
+                    h_byteBuffer.SynchronCopyToHost(d_byteBuffer.DevicePointer);
                 }
 
                 //Avg Frames 
-                 if (isAvg)
+                if (isAvg)
                 {
                     if (currAvgNum < AvgNum - 1)
                     {
@@ -399,8 +400,9 @@ namespace OCTSharp
                     //Output Cast                  
                     BScanOutputCastKernel.Run(d_byteBuffer.DevicePointer, d_flipBuffer.DevicePointer, Max, Min, Mul);
                     //Copy to Host               
-                    h_byteBuffer.SynchronCopyToHost(d_byteBuffer.DevicePointer);
-                    buffer.ReleaseAddress(h_bufferPtr);
+                    //h_byteBuffer.SynchronCopyToHost(d_byteBuffer.DevicePointer);
+                    h_byteBuffer.AsyncCopyFromDevice(d_byteBuffer.DevicePointer, memcpyStream);
+                    //buffer.ReleaseAddress(h_bufferPtr);
                 }
             }
             return true;
@@ -433,12 +435,13 @@ namespace OCTSharp
             //CUDA structure setting
             ctx = new CudaContext();
             deviceID = 0;
-            //BlockDim = ctx.GetDeviceInfo().MaxBlocksPerMultiProcessor;//16 for RTX3080
-            BlockDim = 64;//TODO: Profile test to see the optimal CUDA occupancy
+            BlockDim = ctx.GetDeviceInfo().MaxBlocksPerMultiProcessor;//16 for RTX3080
+            //BlockDim = 64;//TODO: Profile test to see the optimal CUDA occupancy
             GridDim = samplePerBScan / BlockDim;
 
             //Get Pre-compiled CUDA ptx file path
-            string PTXpath = Application.StartupPath + "\\kernel.ptx";
+            //string PTXpath = Application.StartupPath + "\\kernel.ptx"; //debug default path
+            string PTXpath = @"D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Debug\kernel.ptx";
 
             //CUDA info
             string console = string.Format("CUDA device [{0}] has {1} Multi-Processors", ctx.GetDeviceName(), ctx.GetDeviceInfo().MultiProcessorCount);

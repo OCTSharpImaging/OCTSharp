@@ -1,0 +1,859 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "ManagedCuda-11/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ManagedCuda.dll": {}
+        }
+      },
+      "ManagedCuda-CUBLAS.NETStandard/9.1.300": {
+        "type": "package",
+        "dependencies": {
+          "ManagedCuda.NETStandard": "9.1.300"
+        },
+        "compile": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libcublas.so.9.1": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libcublas64_91.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/win-x64/native/cublas64_91.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "ManagedCuda-CUFFT/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CudaFFT.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CudaFFT.dll": {}
+        }
+      },
+      "ManagedCuda.NETStandard/9.1.300": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libnvcuda.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "MathNet.Numerics/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {}
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      },
+      "ZedGraph/5.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "resource": {
+          "lib/net35-Client/de/ZedGraph.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net35-Client/es/ZedGraph.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net35-Client/fr/ZedGraph.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net35-Client/hu/ZedGraph.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net35-Client/it/ZedGraph.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net35-Client/ja/ZedGraph.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net35-Client/pt/ZedGraph.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net35-Client/ru/ZedGraph.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net35-Client/sk/ZedGraph.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net35-Client/sv/ZedGraph.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net35-Client/tr/ZedGraph.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net35-Client/zh-cn/ZedGraph.resources.dll": {
+            "locale": "zh-cn"
+          },
+          "lib/net35-Client/zh-tw/ZedGraph.resources.dll": {
+            "locale": "zh-tw"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "ManagedCuda-11/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ManagedCuda.dll": {}
+        }
+      },
+      "ManagedCuda-CUBLAS.NETStandard/9.1.300": {
+        "type": "package",
+        "dependencies": {
+          "ManagedCuda.NETStandard": "9.1.300"
+        },
+        "compile": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        }
+      },
+      "ManagedCuda-CUFFT/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CudaFFT.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CudaFFT.dll": {}
+        }
+      },
+      "ManagedCuda.NETStandard/9.1.300": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {}
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      },
+      "ZedGraph/5.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "resource": {
+          "lib/net35-Client/de/ZedGraph.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net35-Client/es/ZedGraph.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net35-Client/fr/ZedGraph.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net35-Client/hu/ZedGraph.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net35-Client/it/ZedGraph.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net35-Client/ja/ZedGraph.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net35-Client/pt/ZedGraph.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net35-Client/ru/ZedGraph.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net35-Client/sk/ZedGraph.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net35-Client/sv/ZedGraph.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net35-Client/tr/ZedGraph.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net35-Client/zh-cn/ZedGraph.resources.dll": {
+            "locale": "zh-cn"
+          },
+          "lib/net35-Client/zh-tw/ZedGraph.resources.dll": {
+            "locale": "zh-tw"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "ManagedCuda-11/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ManagedCuda.dll": {}
+        }
+      },
+      "ManagedCuda-CUBLAS.NETStandard/9.1.300": {
+        "type": "package",
+        "dependencies": {
+          "ManagedCuda.NETStandard": "9.1.300"
+        },
+        "compile": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/cublas64_91.dll": {}
+        }
+      },
+      "ManagedCuda-CUFFT/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CudaFFT.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CudaFFT.dll": {}
+        }
+      },
+      "ManagedCuda.NETStandard/9.1.300": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {}
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      },
+      "ZedGraph/5.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "resource": {
+          "lib/net35-Client/de/ZedGraph.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net35-Client/es/ZedGraph.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net35-Client/fr/ZedGraph.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net35-Client/hu/ZedGraph.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net35-Client/it/ZedGraph.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net35-Client/ja/ZedGraph.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net35-Client/pt/ZedGraph.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net35-Client/ru/ZedGraph.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net35-Client/sk/ZedGraph.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net35-Client/sv/ZedGraph.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net35-Client/tr/ZedGraph.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net35-Client/zh-cn/ZedGraph.resources.dll": {
+            "locale": "zh-cn"
+          },
+          "lib/net35-Client/zh-tw/ZedGraph.resources.dll": {
+            "locale": "zh-tw"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "ManagedCuda-11/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ManagedCuda.dll": {}
+        }
+      },
+      "ManagedCuda-CUBLAS.NETStandard/9.1.300": {
+        "type": "package",
+        "dependencies": {
+          "ManagedCuda.NETStandard": "9.1.300"
+        },
+        "compile": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CudaBlas.dll": {}
+        }
+      },
+      "ManagedCuda-CUFFT/11.0.43": {
+        "type": "package",
+        "compile": {
+          "lib/net40/CudaFFT.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CudaFFT.dll": {}
+        }
+      },
+      "ManagedCuda.NETStandard/9.1.300": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ManagedCuda.dll": {}
+        }
+      },
+      "MathNet.Numerics/4.8.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MathNet.Numerics.dll": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {}
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      },
+      "ZedGraph/5.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "runtime": {
+          "lib/net35-Client/ZedGraph.dll": {}
+        },
+        "resource": {
+          "lib/net35-Client/de/ZedGraph.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net35-Client/es/ZedGraph.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net35-Client/fr/ZedGraph.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net35-Client/hu/ZedGraph.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net35-Client/it/ZedGraph.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net35-Client/ja/ZedGraph.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net35-Client/pt/ZedGraph.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net35-Client/ru/ZedGraph.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net35-Client/sk/ZedGraph.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net35-Client/sv/ZedGraph.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net35-Client/tr/ZedGraph.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net35-Client/zh-cn/ZedGraph.resources.dll": {
+            "locale": "zh-cn"
+          },
+          "lib/net35-Client/zh-tw/ZedGraph.resources.dll": {
+            "locale": "zh-tw"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManagedCuda-11/11.0.43": {
+      "sha512": "jAWk12WzY1/Lvjij4TXZKTqJliUdgLGqQ42y8kwqCB0vk//xeZhEMy+Yn0lj9WY7yUhL9gg0PXToWg2iudcoaw==",
+      "type": "package",
+      "path": "managedcuda-11/11.0.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/ManagedCuda.dll",
+        "lib/net40/ManagedCuda.pdb",
+        "lib/net40/ManagedCuda.xml",
+        "lib/netcoreapp3.0/ManagedCuda.netCore.deps.json",
+        "lib/netcoreapp3.0/ManagedCuda.netCore.dll",
+        "lib/netcoreapp3.0/ManagedCuda.netCore.pdb",
+        "lib/netcoreapp3.0/ManagedCuda.netCore.xml",
+        "managedcuda-11.11.0.43.nupkg.sha512",
+        "managedcuda-11.nuspec"
+      ]
+    },
+    "ManagedCuda-CUBLAS.NETStandard/9.1.300": {
+      "sha512": "qMU+KBFmttrlyJRNa+kIMCR++OPtY152nqe/31YBuKbK/lAOAADycSilZq0SOSLCDDze+/RpEfAQh6issRHWHQ==",
+      "type": "package",
+      "path": "managedcuda-cublas.netstandard/9.1.300",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/CudaBlas.dll",
+        "lib/netstandard2.0/CudaBlas.xml",
+        "managedcuda-cublas.netstandard.9.1.300.nupkg.sha512",
+        "managedcuda-cublas.netstandard.nuspec",
+        "runtimes/linux-x64/native/libcublas.so.9.1",
+        "runtimes/linux-x64/native/libcublas64_91.so",
+        "runtimes/win-x64/native/cublas64_91.dll"
+      ]
+    },
+    "ManagedCuda-CUFFT/11.0.43": {
+      "sha512": "1yh+RcU7Y3rQUjDm8zzGBCteQEYx2kAHV69dM4xjDBaTyYzWuguc+KsjBXyQ8+a8fe+fnYljXnTP9+5ReLkJgw==",
+      "type": "package",
+      "path": "managedcuda-cufft/11.0.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/CudaFFT.XML",
+        "lib/net40/CudaFFT.dll",
+        "lib/net40/CudaFFT.pdb",
+        "lib/netcoreapp3.0/CudaFFT.netCore.deps.json",
+        "lib/netcoreapp3.0/CudaFFT.netCore.dll",
+        "lib/netcoreapp3.0/CudaFFT.netCore.pdb",
+        "managedcuda-cufft.11.0.43.nupkg.sha512",
+        "managedcuda-cufft.nuspec"
+      ]
+    },
+    "ManagedCuda.NETStandard/9.1.300": {
+      "sha512": "Qv8KYzDfnHUdXrgjBsd8jShnP68FCLiUhCkfpFVhZub7FArLN+SpfhUZZt/5emoKfj9CIKAcQjeD6OJR7cdjvw==",
+      "type": "package",
+      "path": "managedcuda.netstandard/9.1.300",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/ManagedCuda.dll",
+        "lib/netstandard2.0/ManagedCuda.xml",
+        "managedcuda.netstandard.9.1.300.nupkg.sha512",
+        "managedcuda.netstandard.nuspec",
+        "runtimes/linux-x64/native/libnvcuda.so"
+      ]
+    },
+    "MathNet.Numerics/4.8.1": {
+      "sha512": "HK97Btmlx8WLioRpWpyO3kCpvm3y9n4WzgFDQxaxUP9zbScOxB6JevGyGydcDtVDDPC4Gtv4u/j7pQjK6N+sUA==",
+      "type": "package",
+      "path": "mathnet.numerics/4.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/MathNet.Numerics.dll",
+        "lib/net40/MathNet.Numerics.xml",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/netstandard1.3/MathNet.Numerics.dll",
+        "lib/netstandard1.3/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.4.8.1.nupkg.sha512",
+        "mathnet.numerics.nuspec"
+      ]
+    },
+    "OpenTK/3.1.0": {
+      "sha512": "xoP5kb81lRSY5RzbntaFA9yXK+aGF5SLShhns55MyZtxtNafIxRH5KvRTFss/N653brTzE+AfepjKsbMexYlBQ==",
+      "type": "package",
+      "path": "opentk/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/OpenTK.dll.config",
+        "lib/net20/OpenTK.dll",
+        "lib/net20/OpenTK.pdb",
+        "lib/net20/OpenTK.xml",
+        "opentk.3.1.0.nupkg.sha512",
+        "opentk.nuspec"
+      ]
+    },
+    "OpenTK.GLControl/3.1.0": {
+      "sha512": "BjDzF+MhJd2LaZYzkXmgkzzXgHAko/Iur4rGy6+DPdZA1Jcc0X6jXZ6QsUsjlLRNzgevO7uAj2h1TqX7sguaYg==",
+      "type": "package",
+      "path": "opentk.glcontrol/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/OpenTK.GLControl.dll",
+        "lib/net20/OpenTK.GLControl.pdb",
+        "lib/net20/OpenTK.GLControl.xml",
+        "opentk.glcontrol.3.1.0.nupkg.sha512",
+        "opentk.glcontrol.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.5.1": {
+      "sha512": "GiyeGi/v4xYDz1vCNFwFvhz9k1XddOG7VD3jxRqzRBCbTHji+s3HxxbxtoymuK4OadEpgotI8zQ5+GEEH9sUEQ==",
+      "type": "package",
+      "path": "system.drawing.common/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "system.drawing.common.4.5.1.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "ZedGraph/5.1.7": {
+      "sha512": "TcZaInxUjYMJDWIaYvs/CgpssfVJQMqiry8GPP70klyheP4tYSQXFWi5HYwJvqao+epeUu3bsk3yDb3Nf/hVWw==",
+      "type": "package",
+      "path": "zedgraph/5.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/License-LGPL.txt",
+        "lib/net35-Client/ZedGraph.XML",
+        "lib/net35-Client/ZedGraph.dll",
+        "lib/net35-Client/de/ZedGraph.resources.dll",
+        "lib/net35-Client/es/ZedGraph.resources.dll",
+        "lib/net35-Client/fr/ZedGraph.resources.dll",
+        "lib/net35-Client/hu/ZedGraph.resources.dll",
+        "lib/net35-Client/it/ZedGraph.resources.dll",
+        "lib/net35-Client/ja/ZedGraph.resources.dll",
+        "lib/net35-Client/pt/ZedGraph.resources.dll",
+        "lib/net35-Client/ru/ZedGraph.resources.dll",
+        "lib/net35-Client/sk/ZedGraph.resources.dll",
+        "lib/net35-Client/sv/ZedGraph.resources.dll",
+        "lib/net35-Client/tr/ZedGraph.resources.dll",
+        "lib/net35-Client/zh-cn/ZedGraph.resources.dll",
+        "lib/net35-Client/zh-tw/ZedGraph.resources.dll",
+        "zedgraph.5.1.7.nupkg.sha512",
+        "zedgraph.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "ManagedCuda-11 >= 11.0.43",
+      "ManagedCuda-CUBLAS.NETStandard >= 9.1.300",
+      "ManagedCuda-CUFFT >= 11.0.43",
+      "MathNet.Numerics >= 4.8.1",
+      "OpenTK.GLControl >= 3.1.0",
+      "System.Drawing.Common >= 4.5.1",
+      "ZedGraph >= 5.1.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lamata\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj",
+      "projectName": "OCTSharp",
+      "projectPath": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj",
+      "packagesPath": "C:\\Users\\lamata\\.nuget\\packages\\",
+      "outputPath": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\lamata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "ManagedCuda-11": {
+            "target": "Package",
+            "version": "[11.0.43, )"
+          },
+          "ManagedCuda-CUBLAS.NETStandard": {
+            "target": "Package",
+            "version": "[9.1.300, )"
+          },
+          "ManagedCuda-CUFFT": {
+            "target": "Package",
+            "version": "[11.0.43, )"
+          },
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[4.8.1, )"
+          },
+          "OpenTK.GLControl": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[4.5.1, )"
+          },
+          "ZedGraph": {
+            "target": "Package",
+            "version": "[5.1.7, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
