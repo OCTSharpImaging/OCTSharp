@@ -440,7 +440,7 @@ namespace OCTSharp
             GridDim = samplePerBScan / BlockDim;
 
             //Get Pre-compiled CUDA ptx file path
-            //string PTXpath = Application.StartupPath + "\\kernel.ptx"; //debug default path
+            //string PTXpath = Application.StartupPath + "\\kernel.ptx"; //default application path
             string PTXpath = @"D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Debug\kernel.ptx";
 
             //CUDA info

@@ -7,7 +7,6 @@
 #endif
 #define CUDA_CODE_CU
 
-//#include <stdlib.h>
 #include <stdio.h>
 #include <cuda.h>
 #include <cuda_runtime.h>

@@ -55,7 +55,6 @@ namespace OCTSharp
             this.SaveButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
             this.SaveFilePathBox = new System.Windows.Forms.TextBox();
-            this.browseWriteButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.SampleClockSrc = new System.Windows.Forms.TextBox();
@@ -75,7 +74,6 @@ namespace OCTSharp
             this.label11 = new System.Windows.Forms.Label();
             this.FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.folderDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.CalibrationButton = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.AcqRateLabel = new System.Windows.Forms.Label();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -94,6 +92,8 @@ namespace OCTSharp
             this.AddBar = new System.Windows.Forms.TrackBar();
             this.saveRawFileBox = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.CalBroBtn = new System.Windows.Forms.Button();
+            this.CalibrationCurveTextBox = new System.Windows.Forms.TextBox();
             this.calibrationBox = new System.Windows.Forms.CheckBox();
             this.ModifyCalibCurveBtn = new System.Windows.Forms.Button();
             this.Calib_dBox = new System.Windows.Forms.TextBox();
@@ -107,6 +107,7 @@ namespace OCTSharp
             this.Calib_aBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.browseWriteButton = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.MinBarText = new System.Windows.Forms.Label();
             this.MaxBarText = new System.Windows.Forms.Label();
@@ -170,11 +171,11 @@ namespace OCTSharp
             this.groupBox1.Controls.Add(this.physicalChannelComboBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.amplitudeNumeric);
-            this.groupBox1.Location = new System.Drawing.Point(26, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(35, 246);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(369, 309);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox1.Size = new System.Drawing.Size(492, 386);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Scanner Parameters";
@@ -182,86 +183,86 @@ namespace OCTSharp
             // physicalChannelComboBox2
             // 
             this.physicalChannelComboBox2.FormattingEnabled = true;
-            this.physicalChannelComboBox2.Location = new System.Drawing.Point(162, 102);
-            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.physicalChannelComboBox2.Location = new System.Drawing.Point(216, 128);
+            this.physicalChannelComboBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.physicalChannelComboBox2.Name = "physicalChannelComboBox2";
-            this.physicalChannelComboBox2.Size = new System.Drawing.Size(180, 28);
+            this.physicalChannelComboBox2.Size = new System.Drawing.Size(239, 33);
             this.physicalChannelComboBox2.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 102);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(21, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 20);
+            this.label5.Size = new System.Drawing.Size(154, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "Scanner Arm 2";
             // 
             // maxVolBox
             // 
-            this.maxVolBox.Location = new System.Drawing.Point(162, 223);
-            this.maxVolBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maxVolBox.Location = new System.Drawing.Point(216, 279);
+            this.maxVolBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.maxVolBox.Name = "maxVolBox";
-            this.maxVolBox.Size = new System.Drawing.Size(180, 26);
+            this.maxVolBox.Size = new System.Drawing.Size(239, 31);
             this.maxVolBox.TabIndex = 5;
             this.maxVolBox.Text = "1.5";
             // 
             // minVolBox
             // 
-            this.minVolBox.Location = new System.Drawing.Point(162, 166);
-            this.minVolBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minVolBox.Location = new System.Drawing.Point(216, 208);
+            this.minVolBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.minVolBox.Name = "minVolBox";
-            this.minVolBox.Size = new System.Drawing.Size(180, 26);
+            this.minVolBox.Size = new System.Drawing.Size(239, 31);
             this.minVolBox.TabIndex = 4;
             this.minVolBox.Text = "-1.5";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 223);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(16, 279);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 20);
+            this.label3.Size = new System.Drawing.Size(193, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Maximum Value(V)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 166);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(16, 208);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 20);
+            this.label2.Size = new System.Drawing.Size(187, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Minimum Value(V)";
             // 
             // amplitudeLabel
             // 
             this.amplitudeLabel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.amplitudeLabel.Location = new System.Drawing.Point(15, 266);
-            this.amplitudeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.amplitudeLabel.Location = new System.Drawing.Point(20, 332);
+            this.amplitudeLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.amplitudeLabel.Name = "amplitudeLabel";
-            this.amplitudeLabel.Size = new System.Drawing.Size(114, 31);
+            this.amplitudeLabel.Size = new System.Drawing.Size(152, 39);
             this.amplitudeLabel.TabIndex = 6;
             this.amplitudeLabel.Text = "Amplitude (Volt)";
             // 
             // physicalChannelComboBox
             // 
             this.physicalChannelComboBox.FormattingEnabled = true;
-            this.physicalChannelComboBox.Location = new System.Drawing.Point(162, 29);
-            this.physicalChannelComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.physicalChannelComboBox.Location = new System.Drawing.Point(216, 36);
+            this.physicalChannelComboBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.physicalChannelComboBox.Name = "physicalChannelComboBox";
-            this.physicalChannelComboBox.Size = new System.Drawing.Size(180, 28);
+            this.physicalChannelComboBox.Size = new System.Drawing.Size(239, 33);
             this.physicalChannelComboBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(21, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Scanner Arm 1";
             // 
@@ -273,8 +274,8 @@ namespace OCTSharp
             0,
             0,
             131072});
-            this.amplitudeNumeric.Location = new System.Drawing.Point(162, 263);
-            this.amplitudeNumeric.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.amplitudeNumeric.Location = new System.Drawing.Point(216, 329);
+            this.amplitudeNumeric.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.amplitudeNumeric.Maximum = new decimal(new int[] {
             10,
             0,
@@ -286,7 +287,7 @@ namespace OCTSharp
             0,
             196608});
             this.amplitudeNumeric.Name = "amplitudeNumeric";
-            this.amplitudeNumeric.Size = new System.Drawing.Size(182, 26);
+            this.amplitudeNumeric.Size = new System.Drawing.Size(243, 31);
             this.amplitudeNumeric.TabIndex = 7;
             this.amplitudeNumeric.Value = new decimal(new int[] {
             1,
@@ -296,29 +297,29 @@ namespace OCTSharp
             // 
             // CameraLineRateBox
             // 
-            this.CameraLineRateBox.Location = new System.Drawing.Point(162, 37);
-            this.CameraLineRateBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CameraLineRateBox.Location = new System.Drawing.Point(216, 46);
+            this.CameraLineRateBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.CameraLineRateBox.Name = "CameraLineRateBox";
-            this.CameraLineRateBox.Size = new System.Drawing.Size(180, 26);
+            this.CameraLineRateBox.Size = new System.Drawing.Size(239, 31);
             this.CameraLineRateBox.TabIndex = 6;
             this.CameraLineRateBox.Text = "147724";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 37);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(21, 46);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.Size = new System.Drawing.Size(150, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Line Rate (Hz)";
             // 
             // ScanBotton
             // 
-            this.ScanBotton.Location = new System.Drawing.Point(3153, 78);
-            this.ScanBotton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ScanBotton.Location = new System.Drawing.Point(4204, 98);
+            this.ScanBotton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ScanBotton.Name = "ScanBotton";
-            this.ScanBotton.Size = new System.Drawing.Size(594, 52);
+            this.ScanBotton.Size = new System.Drawing.Size(792, 65);
             this.ScanBotton.TabIndex = 2;
             this.ScanBotton.Text = "Scan";
             this.ScanBotton.UseVisualStyleBackColor = true;
@@ -332,11 +333,11 @@ namespace OCTSharp
             this.Camera.Controls.Add(this.CameraLineRateBox);
             this.Camera.Controls.Add(this.label4);
             this.Camera.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Camera.Location = new System.Drawing.Point(26, 357);
-            this.Camera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Camera.Location = new System.Drawing.Point(35, 4);
+            this.Camera.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Camera.Name = "Camera";
-            this.Camera.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Camera.Size = new System.Drawing.Size(369, 158);
+            this.Camera.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Camera.Size = new System.Drawing.Size(492, 229);
             this.Camera.TabIndex = 5;
             this.Camera.TabStop = false;
             this.Camera.Text = "Camera";
@@ -344,19 +345,19 @@ namespace OCTSharp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 82);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(21, 102);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.Size = new System.Drawing.Size(128, 25);
             this.label7.TabIndex = 21;
             this.label7.Text = "Camera File";
             // 
             // BrowseButton
             // 
-            this.BrowseButton.Location = new System.Drawing.Point(250, 112);
-            this.BrowseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BrowseButton.Location = new System.Drawing.Point(333, 140);
+            this.BrowseButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BrowseButton.Name = "BrowseButton";
-            this.BrowseButton.Size = new System.Drawing.Size(111, 35);
+            this.BrowseButton.Size = new System.Drawing.Size(148, 44);
             this.BrowseButton.TabIndex = 20;
             this.BrowseButton.Text = "Browse";
             this.BrowseButton.UseVisualStyleBackColor = true;
@@ -364,10 +365,10 @@ namespace OCTSharp
             // 
             // cameraFilePathBox
             // 
-            this.cameraFilePathBox.Location = new System.Drawing.Point(9, 117);
-            this.cameraFilePathBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cameraFilePathBox.Location = new System.Drawing.Point(12, 146);
+            this.cameraFilePathBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.cameraFilePathBox.Name = "cameraFilePathBox";
-            this.cameraFilePathBox.Size = new System.Drawing.Size(236, 26);
+            this.cameraFilePathBox.Size = new System.Drawing.Size(313, 31);
             this.cameraFilePathBox.TabIndex = 19;
             this.cameraFilePathBox.Text = "D:\\Weihao Chen\\Camera File\\SUI_GL2048R_4X_1Y_test.ccf";
             this.cameraFilePathBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -375,28 +376,28 @@ namespace OCTSharp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 112);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(11, 140);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 20);
+            this.label8.Size = new System.Drawing.Size(197, 25);
             this.label8.TabIndex = 11;
             this.label8.Text = "Acquisition Trigger ";
             // 
             // counterBox
             // 
-            this.counterBox.Location = new System.Drawing.Point(162, 108);
-            this.counterBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.counterBox.Location = new System.Drawing.Point(216, 135);
+            this.counterBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.counterBox.Name = "counterBox";
-            this.counterBox.Size = new System.Drawing.Size(169, 26);
+            this.counterBox.Size = new System.Drawing.Size(224, 31);
             this.counterBox.TabIndex = 13;
             this.counterBox.Text = "/Dev1/ctr0";
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(3154, 198);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveButton.Location = new System.Drawing.Point(4205, 248);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(594, 48);
+            this.SaveButton.Size = new System.Drawing.Size(792, 60);
             this.SaveButton.TabIndex = 16;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -404,10 +405,10 @@ namespace OCTSharp
             // 
             // StopButton
             // 
-            this.StopButton.Location = new System.Drawing.Point(3153, 140);
-            this.StopButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StopButton.Location = new System.Drawing.Point(4204, 175);
+            this.StopButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(594, 49);
+            this.StopButton.Size = new System.Drawing.Size(792, 61);
             this.StopButton.TabIndex = 17;
             this.StopButton.Text = "Stop";
             this.StopButton.UseVisualStyleBackColor = true;
@@ -415,30 +416,19 @@ namespace OCTSharp
             // 
             // SaveFilePathBox
             // 
-            this.SaveFilePathBox.Location = new System.Drawing.Point(98, 68);
-            this.SaveFilePathBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveFilePathBox.Location = new System.Drawing.Point(131, 85);
+            this.SaveFilePathBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SaveFilePathBox.Name = "SaveFilePathBox";
-            this.SaveFilePathBox.Size = new System.Drawing.Size(198, 26);
+            this.SaveFilePathBox.Size = new System.Drawing.Size(263, 31);
             this.SaveFilePathBox.TabIndex = 18;
-            // 
-            // browseWriteButton
-            // 
-            this.browseWriteButton.Location = new System.Drawing.Point(315, 63);
-            this.browseWriteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.browseWriteButton.Name = "browseWriteButton";
-            this.browseWriteButton.Size = new System.Drawing.Size(46, 35);
-            this.browseWriteButton.TabIndex = 19;
-            this.browseWriteButton.Text = "...";
-            this.browseWriteButton.UseVisualStyleBackColor = true;
-            this.browseWriteButton.Click += new System.EventHandler(this.browseWriteButton_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 69);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(11, 86);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.Size = new System.Drawing.Size(122, 25);
             this.label10.TabIndex = 20;
             this.label10.Text = "Select Path";
             // 
@@ -448,31 +438,31 @@ namespace OCTSharp
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.counterBox);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(26, 818);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(35, 1022);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(369, 154);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox2.Size = new System.Drawing.Size(492, 192);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Trigger";
             // 
             // SampleClockSrc
             // 
-            this.SampleClockSrc.Location = new System.Drawing.Point(159, 42);
-            this.SampleClockSrc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SampleClockSrc.Location = new System.Drawing.Point(212, 52);
+            this.SampleClockSrc.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SampleClockSrc.Name = "SampleClockSrc";
-            this.SampleClockSrc.Size = new System.Drawing.Size(169, 26);
+            this.SampleClockSrc.Size = new System.Drawing.Size(224, 31);
             this.SampleClockSrc.TabIndex = 15;
             this.SampleClockSrc.Text = "/Dev1/PFI0";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 42);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(19, 52);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 20);
+            this.label6.Size = new System.Drawing.Size(178, 25);
             this.label6.TabIndex = 14;
             this.label6.Text = "Line Rate Source";
             // 
@@ -491,19 +481,19 @@ namespace OCTSharp
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox3.Location = new System.Drawing.Point(26, 515);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(35, 644);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(369, 305);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox3.Size = new System.Drawing.Size(492, 381);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OCT ";
             // 
             // rNumBox
             // 
-            this.rNumBox.Location = new System.Drawing.Point(174, 265);
-            this.rNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rNumBox.Location = new System.Drawing.Point(232, 331);
+            this.rNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.rNumBox.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -515,7 +505,7 @@ namespace OCTSharp
             0,
             0});
             this.rNumBox.Name = "rNumBox";
-            this.rNumBox.Size = new System.Drawing.Size(170, 26);
+            this.rNumBox.Size = new System.Drawing.Size(227, 31);
             this.rNumBox.TabIndex = 27;
             this.rNumBox.Value = new decimal(new int[] {
             150,
@@ -526,17 +516,17 @@ namespace OCTSharp
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(21, 265);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(28, 331);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(59, 20);
+            this.label28.Size = new System.Drawing.Size(78, 25);
             this.label28.TabIndex = 26;
             this.label28.Text = "R-Num";
             // 
             // fNumBox
             // 
-            this.fNumBox.Location = new System.Drawing.Point(174, 222);
-            this.fNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fNumBox.Location = new System.Drawing.Point(232, 278);
+            this.fNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.fNumBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -548,7 +538,7 @@ namespace OCTSharp
             0,
             0});
             this.fNumBox.Name = "fNumBox";
-            this.fNumBox.Size = new System.Drawing.Size(170, 26);
+            this.fNumBox.Size = new System.Drawing.Size(227, 31);
             this.fNumBox.TabIndex = 25;
             this.fNumBox.Value = new decimal(new int[] {
             1,
@@ -559,37 +549,37 @@ namespace OCTSharp
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(21, 222);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(28, 278);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 20);
+            this.label21.Size = new System.Drawing.Size(76, 25);
             this.label21.TabIndex = 24;
             this.label21.Text = "F-Num";
             // 
             // pixelDepthBox
             // 
             this.pixelDepthBox.FormattingEnabled = true;
-            this.pixelDepthBox.Location = new System.Drawing.Point(174, 29);
-            this.pixelDepthBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pixelDepthBox.Location = new System.Drawing.Point(232, 36);
+            this.pixelDepthBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pixelDepthBox.Name = "pixelDepthBox";
-            this.pixelDepthBox.Size = new System.Drawing.Size(166, 28);
+            this.pixelDepthBox.Size = new System.Drawing.Size(220, 33);
             this.pixelDepthBox.TabIndex = 23;
             this.pixelDepthBox.Text = "12";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 29);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(28, 36);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 20);
+            this.label13.Size = new System.Drawing.Size(122, 25);
             this.label13.TabIndex = 16;
             this.label13.Text = "Pixel Depth";
             // 
             // aNumBox
             // 
-            this.aNumBox.Location = new System.Drawing.Point(174, 77);
-            this.aNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.aNumBox.Location = new System.Drawing.Point(232, 96);
+            this.aNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.aNumBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -601,7 +591,7 @@ namespace OCTSharp
             0,
             0});
             this.aNumBox.Name = "aNumBox";
-            this.aNumBox.Size = new System.Drawing.Size(170, 26);
+            this.aNumBox.Size = new System.Drawing.Size(227, 31);
             this.aNumBox.TabIndex = 15;
             this.aNumBox.Value = new decimal(new int[] {
             2048,
@@ -612,10 +602,10 @@ namespace OCTSharp
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 77);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(29, 96);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
+            this.label12.Size = new System.Drawing.Size(77, 25);
             this.label12.TabIndex = 14;
             this.label12.Text = "A-Num";
             // 
@@ -626,8 +616,8 @@ namespace OCTSharp
             0,
             0,
             0});
-            this.bNumBox.Location = new System.Drawing.Point(172, 125);
-            this.bNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bNumBox.Location = new System.Drawing.Point(229, 156);
+            this.bNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bNumBox.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -639,7 +629,7 @@ namespace OCTSharp
             0,
             0});
             this.bNumBox.Name = "bNumBox";
-            this.bNumBox.Size = new System.Drawing.Size(170, 26);
+            this.bNumBox.Size = new System.Drawing.Size(227, 31);
             this.bNumBox.TabIndex = 13;
             this.bNumBox.Value = new decimal(new int[] {
             2048,
@@ -650,8 +640,8 @@ namespace OCTSharp
             // 
             // cNumBox
             // 
-            this.cNumBox.Location = new System.Drawing.Point(172, 172);
-            this.cNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cNumBox.Location = new System.Drawing.Point(229, 215);
+            this.cNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.cNumBox.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -663,7 +653,7 @@ namespace OCTSharp
             0,
             0});
             this.cNumBox.Name = "cNumBox";
-            this.cNumBox.Size = new System.Drawing.Size(170, 26);
+            this.cNumBox.Size = new System.Drawing.Size(227, 31);
             this.cNumBox.TabIndex = 9;
             this.cNumBox.Value = new decimal(new int[] {
             1,
@@ -674,20 +664,20 @@ namespace OCTSharp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 177);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(27, 221);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 20);
+            this.label9.Size = new System.Drawing.Size(78, 25);
             this.label9.TabIndex = 7;
             this.label9.Text = "C-Num";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 128);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(27, 160);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 20);
+            this.label11.Size = new System.Drawing.Size(77, 25);
             this.label11.TabIndex = 4;
             this.label11.Text = "B-Num";
             // 
@@ -699,27 +689,16 @@ namespace OCTSharp
             // 
             this.folderDialog.SelectedPath = "C:\\";
             // 
-            // CalibrationButton
-            // 
-            this.CalibrationButton.Location = new System.Drawing.Point(8, 62);
-            this.CalibrationButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CalibrationButton.Name = "CalibrationButton";
-            this.CalibrationButton.Size = new System.Drawing.Size(130, 34);
-            this.CalibrationButton.TabIndex = 24;
-            this.CalibrationButton.Text = "Import Calibration Curve";
-            this.CalibrationButton.UseVisualStyleBackColor = true;
-            this.CalibrationButton.Click += new System.EventHandler(this.CalibrationButton_Click);
-            // 
             // label17
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(16, 45);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(21, 56);
+            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(213, 20);
+            this.label17.Size = new System.Drawing.Size(287, 25);
             this.label17.TabIndex = 31;
             this.label17.Text = "Acquisition Frame Rate (Hz):";
             // 
@@ -729,10 +708,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AcqRateLabel.AutoSize = true;
-            this.AcqRateLabel.Location = new System.Drawing.Point(230, 45);
-            this.AcqRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AcqRateLabel.Location = new System.Drawing.Point(307, 56);
+            this.AcqRateLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.AcqRateLabel.Name = "AcqRateLabel";
-            this.AcqRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.AcqRateLabel.Size = new System.Drawing.Size(24, 25);
             this.AcqRateLabel.TabIndex = 32;
             this.AcqRateLabel.Text = "0";
             // 
@@ -742,8 +721,8 @@ namespace OCTSharp
             this.chart.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
             chartArea1.Name = "ChartArea1";
             this.chart.ChartAreas.Add(chartArea1);
-            this.chart.Location = new System.Drawing.Point(2014, 31);
-            this.chart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chart.Location = new System.Drawing.Point(2685, 39);
+            this.chart.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -751,15 +730,15 @@ namespace OCTSharp
             series1.Name = "spectrum";
             series1.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(1098, 769);
+            this.chart.Size = new System.Drawing.Size(1464, 961);
             this.chart.TabIndex = 33;
             this.chart.Text = "chart";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(482, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(643, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1000, 500);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -772,8 +751,8 @@ namespace OCTSharp
             this.chart1.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Location = new System.Drawing.Point(2014, 809);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chart1.Location = new System.Drawing.Point(2685, 1011);
+            this.chart1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.chart1.Name = "chart1";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -781,37 +760,37 @@ namespace OCTSharp
             series2.Name = "spectrum";
             series2.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(1108, 820);
+            this.chart1.Size = new System.Drawing.Size(1477, 1025);
             this.chart1.TabIndex = 35;
             this.chart1.Text = "chart1";
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(3818, -6);
+            this.vScrollBar1.Location = new System.Drawing.Point(5091, -8);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 1629);
+            this.vScrollBar1.Size = new System.Drawing.Size(20, 2036);
             this.vScrollBar1.TabIndex = 36;
             // 
             // MaxBar
             // 
-            this.MaxBar.Location = new System.Drawing.Point(57, 28);
-            this.MaxBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaxBar.Location = new System.Drawing.Point(76, 35);
+            this.MaxBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaxBar.Maximum = 255;
             this.MaxBar.Minimum = 100;
             this.MaxBar.Name = "MaxBar";
-            this.MaxBar.Size = new System.Drawing.Size(507, 69);
+            this.MaxBar.Size = new System.Drawing.Size(676, 90);
             this.MaxBar.TabIndex = 38;
             this.MaxBar.Value = 255;
             this.MaxBar.Scroll += new System.EventHandler(this.MaxBar_Scroll);
             // 
             // MinBar
             // 
-            this.MinBar.Location = new System.Drawing.Point(54, 111);
-            this.MinBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinBar.Location = new System.Drawing.Point(72, 139);
+            this.MinBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MinBar.Maximum = 100;
             this.MinBar.Minimum = 1;
             this.MinBar.Name = "MinBar";
-            this.MinBar.Size = new System.Drawing.Size(510, 69);
+            this.MinBar.Size = new System.Drawing.Size(680, 90);
             this.MinBar.TabIndex = 39;
             this.MinBar.Value = 1;
             this.MinBar.Scroll += new System.EventHandler(this.MinBar_Scroll);
@@ -819,52 +798,52 @@ namespace OCTSharp
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(16, 32);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(21, 40);
+            this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 20);
+            this.label19.Size = new System.Drawing.Size(53, 25);
             this.label19.TabIndex = 40;
             this.label19.Text = "Max";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 118);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(24, 148);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(34, 20);
+            this.label20.Size = new System.Drawing.Size(47, 25);
             this.label20.TabIndex = 41;
             this.label20.Text = "Min";
             // 
             // MulBarText
             // 
             this.MulBarText.AutoSize = true;
-            this.MulBarText.Location = new System.Drawing.Point(18, 234);
-            this.MulBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MulBarText.Location = new System.Drawing.Point(24, 292);
+            this.MulBarText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.MulBarText.Name = "MulBarText";
-            this.MulBarText.Size = new System.Drawing.Size(45, 20);
+            this.MulBarText.Size = new System.Drawing.Size(60, 25);
             this.MulBarText.TabIndex = 259;
             this.MulBarText.Text = "1000";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(24, 214);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(32, 268);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(34, 20);
+            this.label23.Size = new System.Drawing.Size(47, 25);
             this.label23.TabIndex = 258;
             this.label23.Text = "Mul";
             // 
             // MulBar
             // 
             this.MulBar.LargeChange = 100;
-            this.MulBar.Location = new System.Drawing.Point(70, 211);
-            this.MulBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MulBar.Location = new System.Drawing.Point(93, 264);
+            this.MulBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MulBar.Maximum = 2500;
             this.MulBar.Minimum = 1;
             this.MulBar.Name = "MulBar";
-            this.MulBar.Size = new System.Drawing.Size(494, 69);
+            this.MulBar.Size = new System.Drawing.Size(659, 90);
             this.MulBar.TabIndex = 257;
             this.MulBar.Value = 1000;
             this.MulBar.Scroll += new System.EventHandler(this.MulBar_Scroll);
@@ -872,10 +851,10 @@ namespace OCTSharp
             // AddBarText
             // 
             this.AddBarText.AutoSize = true;
-            this.AddBarText.Location = new System.Drawing.Point(21, 325);
-            this.AddBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AddBarText.Location = new System.Drawing.Point(28, 406);
+            this.AddBarText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.AddBarText.Name = "AddBarText";
-            this.AddBarText.Size = new System.Drawing.Size(31, 20);
+            this.AddBarText.Size = new System.Drawing.Size(42, 25);
             this.AddBarText.TabIndex = 262;
             this.AddBarText.Text = "0.0";
             this.AddBarText.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -883,36 +862,38 @@ namespace OCTSharp
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(21, 305);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(28, 381);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(38, 20);
+            this.label24.Size = new System.Drawing.Size(50, 25);
             this.label24.TabIndex = 261;
             this.label24.Text = "Add";
             // 
             // AddBar
             // 
-            this.AddBar.Location = new System.Drawing.Point(70, 302);
-            this.AddBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddBar.Location = new System.Drawing.Point(93, 378);
+            this.AddBar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AddBar.Maximum = 100;
             this.AddBar.Name = "AddBar";
-            this.AddBar.Size = new System.Drawing.Size(494, 69);
+            this.AddBar.Size = new System.Drawing.Size(659, 90);
             this.AddBar.TabIndex = 260;
             this.AddBar.Scroll += new System.EventHandler(this.AddBar_Scroll);
             // 
             // saveRawFileBox
             // 
             this.saveRawFileBox.AutoSize = true;
-            this.saveRawFileBox.Location = new System.Drawing.Point(16, 29);
-            this.saveRawFileBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.saveRawFileBox.Location = new System.Drawing.Point(21, 36);
+            this.saveRawFileBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.saveRawFileBox.Name = "saveRawFileBox";
-            this.saveRawFileBox.Size = new System.Drawing.Size(140, 24);
+            this.saveRawFileBox.Size = new System.Drawing.Size(188, 29);
             this.saveRawFileBox.TabIndex = 263;
             this.saveRawFileBox.Text = "Save .Raw File";
             this.saveRawFileBox.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.CalBroBtn);
+            this.groupBox4.Controls.Add(this.CalibrationCurveTextBox);
             this.groupBox4.Controls.Add(this.calibrationBox);
             this.groupBox4.Controls.Add(this.ModifyCalibCurveBtn);
             this.groupBox4.Controls.Add(this.Calib_dBox);
@@ -925,33 +906,52 @@ namespace OCTSharp
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.Calib_aBox);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.CalibrationButton);
-            this.groupBox4.Location = new System.Drawing.Point(26, 1126);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Location = new System.Drawing.Point(35, 1408);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox4.Size = new System.Drawing.Size(369, 338);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox4.Size = new System.Drawing.Size(492, 422);
             this.groupBox4.TabIndex = 265;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "3rd order Calibration";
             // 
+            // CalBroBtn
+            // 
+            this.CalBroBtn.Location = new System.Drawing.Point(419, 29);
+            this.CalBroBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.CalBroBtn.Name = "CalBroBtn";
+            this.CalBroBtn.Size = new System.Drawing.Size(61, 44);
+            this.CalBroBtn.TabIndex = 264;
+            this.CalBroBtn.Text = "...";
+            this.CalBroBtn.UseVisualStyleBackColor = true;
+            this.CalBroBtn.Click += new System.EventHandler(this.CalBroBtn_Click);
+            // 
+            // CalibrationCurveTextBox
+            // 
+            this.CalibrationCurveTextBox.Location = new System.Drawing.Point(131, 32);
+            this.CalibrationCurveTextBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.CalibrationCurveTextBox.Name = "CalibrationCurveTextBox";
+            this.CalibrationCurveTextBox.Size = new System.Drawing.Size(311, 31);
+            this.CalibrationCurveTextBox.TabIndex = 264;
+            this.CalibrationCurveTextBox.Text = "@D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\bin\\x64\\Debug\\CalibrationCurve.xlsx";
+            // 
             // calibrationBox
             // 
             this.calibrationBox.AutoSize = true;
-            this.calibrationBox.Location = new System.Drawing.Point(8, 28);
-            this.calibrationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.calibrationBox.Location = new System.Drawing.Point(16, 39);
+            this.calibrationBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.calibrationBox.Name = "calibrationBox";
-            this.calibrationBox.Size = new System.Drawing.Size(85, 24);
+            this.calibrationBox.Size = new System.Drawing.Size(111, 29);
             this.calibrationBox.TabIndex = 268;
             this.calibrationBox.Text = "Enable";
             this.calibrationBox.UseVisualStyleBackColor = true;
             // 
             // ModifyCalibCurveBtn
             // 
-            this.ModifyCalibCurveBtn.Location = new System.Drawing.Point(162, 62);
-            this.ModifyCalibCurveBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ModifyCalibCurveBtn.Location = new System.Drawing.Point(277, 78);
+            this.ModifyCalibCurveBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ModifyCalibCurveBtn.Name = "ModifyCalibCurveBtn";
-            this.ModifyCalibCurveBtn.Size = new System.Drawing.Size(148, 34);
+            this.ModifyCalibCurveBtn.Size = new System.Drawing.Size(165, 42);
             this.ModifyCalibCurveBtn.TabIndex = 33;
             this.ModifyCalibCurveBtn.Text = "Modify";
             this.ModifyCalibCurveBtn.UseVisualStyleBackColor = true;
@@ -959,96 +959,96 @@ namespace OCTSharp
             // 
             // Calib_dBox
             // 
-            this.Calib_dBox.Location = new System.Drawing.Point(162, 294);
-            this.Calib_dBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Calib_dBox.Location = new System.Drawing.Point(216, 368);
+            this.Calib_dBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Calib_dBox.Name = "Calib_dBox";
-            this.Calib_dBox.Size = new System.Drawing.Size(169, 26);
+            this.Calib_dBox.Size = new System.Drawing.Size(224, 31);
             this.Calib_dBox.TabIndex = 32;
             this.Calib_dBox.Text = "0.00";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 298);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(5, 372);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(18, 20);
+            this.label22.Size = new System.Drawing.Size(24, 25);
             this.label22.TabIndex = 31;
             this.label22.Text = "d";
             // 
             // CalibCurveBox
             // 
-            this.CalibCurveBox.Location = new System.Drawing.Point(69, 114);
-            this.CalibCurveBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CalibCurveBox.Location = new System.Drawing.Point(92, 142);
+            this.CalibCurveBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.CalibCurveBox.Name = "CalibCurveBox";
-            this.CalibCurveBox.Size = new System.Drawing.Size(260, 26);
+            this.CalibCurveBox.Size = new System.Drawing.Size(345, 31);
             this.CalibCurveBox.TabIndex = 30;
             this.CalibCurveBox.Text = "K = d + c*X + b*X^2 + a*X^3";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 114);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(11, 142);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 20);
+            this.label14.Size = new System.Drawing.Size(69, 25);
             this.label14.TabIndex = 29;
             this.label14.Text = "Cruve";
             // 
             // Calib_cBox
             // 
-            this.Calib_cBox.Location = new System.Drawing.Point(162, 249);
-            this.Calib_cBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Calib_cBox.Location = new System.Drawing.Point(216, 311);
+            this.Calib_cBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Calib_cBox.Name = "Calib_cBox";
-            this.Calib_cBox.Size = new System.Drawing.Size(169, 26);
+            this.Calib_cBox.Size = new System.Drawing.Size(224, 31);
             this.Calib_cBox.TabIndex = 28;
             this.Calib_cBox.Text = "1.00";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 254);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(5, 318);
+            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(17, 20);
+            this.label18.Size = new System.Drawing.Size(23, 25);
             this.label18.TabIndex = 27;
             this.label18.Text = "c";
             // 
             // Calib_bBox
             // 
-            this.Calib_bBox.Location = new System.Drawing.Point(162, 200);
-            this.Calib_bBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Calib_bBox.Location = new System.Drawing.Point(216, 250);
+            this.Calib_bBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Calib_bBox.Name = "Calib_bBox";
-            this.Calib_bBox.Size = new System.Drawing.Size(169, 26);
+            this.Calib_bBox.Size = new System.Drawing.Size(224, 31);
             this.Calib_bBox.TabIndex = 26;
             this.Calib_bBox.Text = "0.00";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 208);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(11, 260);
+            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(18, 20);
+            this.label16.Size = new System.Drawing.Size(24, 25);
             this.label16.TabIndex = 25;
             this.label16.Text = "b";
             // 
             // Calib_aBox
             // 
-            this.Calib_aBox.Location = new System.Drawing.Point(162, 154);
-            this.Calib_aBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Calib_aBox.Location = new System.Drawing.Point(216, 192);
+            this.Calib_aBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Calib_aBox.Name = "Calib_aBox";
-            this.Calib_aBox.Size = new System.Drawing.Size(169, 26);
+            this.Calib_aBox.Size = new System.Drawing.Size(224, 31);
             this.Calib_aBox.TabIndex = 13;
             this.Calib_aBox.Text = "0.00";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 158);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(11, 198);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(18, 20);
+            this.label15.Size = new System.Drawing.Size(24, 25);
             this.label15.TabIndex = 11;
             this.label15.Text = "a";
             // 
@@ -1058,14 +1058,25 @@ namespace OCTSharp
             this.groupBox5.Controls.Add(this.SaveFilePathBox);
             this.groupBox5.Controls.Add(this.saveRawFileBox);
             this.groupBox5.Controls.Add(this.browseWriteButton);
-            this.groupBox5.Location = new System.Drawing.Point(26, 982);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Location = new System.Drawing.Point(35, 1228);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox5.Size = new System.Drawing.Size(369, 122);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox5.Size = new System.Drawing.Size(492, 152);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Save";
+            // 
+            // browseWriteButton
+            // 
+            this.browseWriteButton.Location = new System.Drawing.Point(420, 79);
+            this.browseWriteButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.browseWriteButton.Name = "browseWriteButton";
+            this.browseWriteButton.Size = new System.Drawing.Size(61, 44);
+            this.browseWriteButton.TabIndex = 19;
+            this.browseWriteButton.Text = "...";
+            this.browseWriteButton.UseVisualStyleBackColor = true;
+            this.browseWriteButton.Click += new System.EventHandler(this.browseWriteButton_Click);
             // 
             // groupBox6
             // 
@@ -1081,11 +1092,11 @@ namespace OCTSharp
             this.groupBox6.Controls.Add(this.label24);
             this.groupBox6.Controls.Add(this.MulBarText);
             this.groupBox6.Controls.Add(this.AddBar);
-            this.groupBox6.Location = new System.Drawing.Point(3153, 298);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Location = new System.Drawing.Point(4204, 372);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(594, 405);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox6.Size = new System.Drawing.Size(792, 506);
             this.groupBox6.TabIndex = 266;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Contrast";
@@ -1093,20 +1104,20 @@ namespace OCTSharp
             // MinBarText
             // 
             this.MinBarText.AutoSize = true;
-            this.MinBarText.Location = new System.Drawing.Point(26, 143);
-            this.MinBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MinBarText.Location = new System.Drawing.Point(35, 179);
+            this.MinBarText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.MinBarText.Name = "MinBarText";
-            this.MinBarText.Size = new System.Drawing.Size(18, 20);
+            this.MinBarText.Size = new System.Drawing.Size(24, 25);
             this.MinBarText.TabIndex = 264;
             this.MinBarText.Text = "1";
             // 
             // MaxBarText
             // 
             this.MaxBarText.AutoSize = true;
-            this.MaxBarText.Location = new System.Drawing.Point(15, 57);
-            this.MaxBarText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MaxBarText.Location = new System.Drawing.Point(20, 71);
+            this.MaxBarText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.MaxBarText.Name = "MaxBarText";
-            this.MaxBarText.Size = new System.Drawing.Size(36, 20);
+            this.MaxBarText.Size = new System.Drawing.Size(48, 25);
             this.MaxBarText.TabIndex = 263;
             this.MaxBarText.Text = "255";
             // 
@@ -1120,9 +1131,11 @@ namespace OCTSharp
             this.groupBox7.Controls.Add(this.AvgNumBox);
             this.groupBox7.Controls.Add(this.label25);
             this.groupBox7.Controls.Add(this.AvgBox);
-            this.groupBox7.Location = new System.Drawing.Point(26, 1478);
+            this.groupBox7.Location = new System.Drawing.Point(35, 1848);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(369, 151);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(492, 189);
             this.groupBox7.TabIndex = 267;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Display";
@@ -1130,10 +1143,10 @@ namespace OCTSharp
             // FPSBox
             // 
             this.FPSBox.AutoSize = true;
-            this.FPSBox.Location = new System.Drawing.Point(159, 57);
-            this.FPSBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FPSBox.Location = new System.Drawing.Point(212, 71);
+            this.FPSBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.FPSBox.Name = "FPSBox";
-            this.FPSBox.Size = new System.Drawing.Size(109, 24);
+            this.FPSBox.Size = new System.Drawing.Size(143, 29);
             this.FPSBox.TabIndex = 272;
             this.FPSBox.Text = "FPS Chart";
             this.FPSBox.UseVisualStyleBackColor = true;
@@ -1141,10 +1154,10 @@ namespace OCTSharp
             // FFTBox
             // 
             this.FFTBox.AutoSize = true;
-            this.FFTBox.Location = new System.Drawing.Point(159, 28);
-            this.FFTBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FFTBox.Location = new System.Drawing.Point(212, 35);
+            this.FFTBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.FFTBox.Name = "FFTBox";
-            this.FFTBox.Size = new System.Drawing.Size(107, 24);
+            this.FFTBox.Size = new System.Drawing.Size(141, 29);
             this.FFTBox.TabIndex = 271;
             this.FFTBox.Text = "FFT Chart";
             this.FFTBox.UseVisualStyleBackColor = true;
@@ -1152,10 +1165,10 @@ namespace OCTSharp
             // SpectrumBox
             // 
             this.SpectrumBox.AutoSize = true;
-            this.SpectrumBox.Location = new System.Drawing.Point(9, 28);
-            this.SpectrumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SpectrumBox.Location = new System.Drawing.Point(12, 35);
+            this.SpectrumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SpectrumBox.Name = "SpectrumBox";
-            this.SpectrumBox.Size = new System.Drawing.Size(138, 24);
+            this.SpectrumBox.Size = new System.Drawing.Size(181, 29);
             this.SpectrumBox.TabIndex = 270;
             this.SpectrumBox.Text = "Spctrum Chart";
             this.SpectrumBox.UseVisualStyleBackColor = true;
@@ -1163,10 +1176,10 @@ namespace OCTSharp
             // enfaceBox
             // 
             this.enfaceBox.AutoSize = true;
-            this.enfaceBox.Location = new System.Drawing.Point(10, 88);
-            this.enfaceBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.enfaceBox.Location = new System.Drawing.Point(13, 110);
+            this.enfaceBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.enfaceBox.Name = "enfaceBox";
-            this.enfaceBox.Size = new System.Drawing.Size(145, 24);
+            this.enfaceBox.Size = new System.Drawing.Size(191, 29);
             this.enfaceBox.TabIndex = 269;
             this.enfaceBox.Text = "Enable En-face";
             this.enfaceBox.UseVisualStyleBackColor = true;
@@ -1174,18 +1187,18 @@ namespace OCTSharp
             // SpecVarBox
             // 
             this.SpecVarBox.AutoSize = true;
-            this.SpecVarBox.Location = new System.Drawing.Point(10, 57);
-            this.SpecVarBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SpecVarBox.Location = new System.Drawing.Point(13, 71);
+            this.SpecVarBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SpecVarBox.Name = "SpecVarBox";
-            this.SpecVarBox.Size = new System.Drawing.Size(147, 24);
+            this.SpecVarBox.Size = new System.Drawing.Size(195, 29);
             this.SpecVarBox.TabIndex = 268;
             this.SpecVarBox.Text = "Speckle Variant";
             this.SpecVarBox.UseVisualStyleBackColor = true;
             // 
             // AvgNumBox
             // 
-            this.AvgNumBox.Location = new System.Drawing.Point(135, 112);
-            this.AvgNumBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AvgNumBox.Location = new System.Drawing.Point(180, 140);
+            this.AvgNumBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AvgNumBox.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -1197,7 +1210,7 @@ namespace OCTSharp
             0,
             0});
             this.AvgNumBox.Name = "AvgNumBox";
-            this.AvgNumBox.Size = new System.Drawing.Size(63, 26);
+            this.AvgNumBox.Size = new System.Drawing.Size(84, 31);
             this.AvgNumBox.TabIndex = 267;
             this.AvgNumBox.Value = new decimal(new int[] {
             3,
@@ -1208,20 +1221,20 @@ namespace OCTSharp
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(198, 117);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(264, 146);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(126, 20);
+            this.label25.Size = new System.Drawing.Size(170, 25);
             this.label25.TabIndex = 266;
             this.label25.Text = "Frames Average";
             // 
             // AvgBox
             // 
             this.AvgBox.AutoSize = true;
-            this.AvgBox.Location = new System.Drawing.Point(10, 115);
-            this.AvgBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AvgBox.Location = new System.Drawing.Point(13, 144);
+            this.AvgBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AvgBox.Name = "AvgBox";
-            this.AvgBox.Size = new System.Drawing.Size(116, 24);
+            this.AvgBox.Size = new System.Drawing.Size(154, 29);
             this.AvgBox.TabIndex = 264;
             this.AvgBox.Text = "Enable Avg";
             this.AvgBox.UseVisualStyleBackColor = true;
@@ -1229,8 +1242,8 @@ namespace OCTSharp
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(482, 835);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(643, 1044);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1000, 500);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1243,10 +1256,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(477, 3);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(636, 4);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(122, 20);
+            this.label26.Size = new System.Drawing.Size(164, 25);
             this.label26.TabIndex = 269;
             this.label26.Text = "B-Scan Window";
             // 
@@ -1256,10 +1269,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(477, 802);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(636, 1002);
+            this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(130, 20);
+            this.label27.Size = new System.Drawing.Size(175, 25);
             this.label27.TabIndex = 270;
             this.label27.Text = "En-Face Window";
             // 
@@ -1269,10 +1282,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.processRateLabel.AutoSize = true;
-            this.processRateLabel.Location = new System.Drawing.Point(230, 82);
-            this.processRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.processRateLabel.Location = new System.Drawing.Point(307, 102);
+            this.processRateLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.processRateLabel.Name = "processRateLabel";
-            this.processRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.processRateLabel.Size = new System.Drawing.Size(24, 25);
             this.processRateLabel.TabIndex = 272;
             this.processRateLabel.Text = "0";
             // 
@@ -1282,10 +1295,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(16, 82);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(21, 102);
+            this.label30.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(214, 20);
+            this.label30.Size = new System.Drawing.Size(289, 25);
             this.label30.TabIndex = 271;
             this.label30.Text = "Processing Frame Rate (Hz):";
             // 
@@ -1295,8 +1308,8 @@ namespace OCTSharp
             this.chart2.BorderlineColor = System.Drawing.SystemColors.AppWorkspace;
             chartArea3.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea3);
-            this.chart2.Location = new System.Drawing.Point(22, 151);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chart2.Location = new System.Drawing.Point(29, 189);
+            this.chart2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.chart2.Name = "chart2";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -1304,17 +1317,17 @@ namespace OCTSharp
             series3.Name = "spectrum";
             series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(520, 518);
+            this.chart2.Size = new System.Drawing.Size(693, 648);
             this.chart2.TabIndex = 273;
             this.chart2.Text = "chart2";
             this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // LoadProcessButton
             // 
-            this.LoadProcessButton.Location = new System.Drawing.Point(148, 58);
-            this.LoadProcessButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LoadProcessButton.Location = new System.Drawing.Point(197, 72);
+            this.LoadProcessButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.LoadProcessButton.Name = "LoadProcessButton";
-            this.LoadProcessButton.Size = new System.Drawing.Size(312, 48);
+            this.LoadProcessButton.Size = new System.Drawing.Size(416, 60);
             this.LoadProcessButton.TabIndex = 274;
             this.LoadProcessButton.Text = "Load && Process";
             this.LoadProcessButton.UseVisualStyleBackColor = true;
@@ -1323,11 +1336,11 @@ namespace OCTSharp
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.LoadProcessButton);
-            this.groupBox8.Location = new System.Drawing.Point(3153, 1448);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Location = new System.Drawing.Point(4204, 1810);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox8.Size = new System.Drawing.Size(594, 145);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox8.Size = new System.Drawing.Size(792, 181);
             this.groupBox8.TabIndex = 275;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Post-Processing";
@@ -1341,9 +1354,11 @@ namespace OCTSharp
             this.BenchmarkLog.Controls.Add(this.label17);
             this.BenchmarkLog.Controls.Add(this.AcqRateLabel);
             this.BenchmarkLog.Controls.Add(this.processRateLabel);
-            this.BenchmarkLog.Location = new System.Drawing.Point(3153, 711);
+            this.BenchmarkLog.Location = new System.Drawing.Point(4204, 889);
+            this.BenchmarkLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BenchmarkLog.Name = "BenchmarkLog";
-            this.BenchmarkLog.Size = new System.Drawing.Size(594, 695);
+            this.BenchmarkLog.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BenchmarkLog.Size = new System.Drawing.Size(792, 869);
             this.BenchmarkLog.TabIndex = 276;
             this.BenchmarkLog.TabStop = false;
             this.BenchmarkLog.Text = "Benchmark";
@@ -1354,10 +1369,10 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(16, 126);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(21, 158);
+            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(198, 20);
+            this.label29.Size = new System.Drawing.Size(268, 25);
             this.label29.TabIndex = 274;
             this.label29.Text = "Display Frame Rate (FPS):";
             // 
@@ -1367,20 +1382,20 @@ namespace OCTSharp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayRateLabel.AutoSize = true;
-            this.DisplayRateLabel.Location = new System.Drawing.Point(222, 126);
-            this.DisplayRateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DisplayRateLabel.Location = new System.Drawing.Point(296, 158);
+            this.DisplayRateLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DisplayRateLabel.Name = "DisplayRateLabel";
-            this.DisplayRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.DisplayRateLabel.Size = new System.Drawing.Size(24, 25);
             this.DisplayRateLabel.TabIndex = 275;
             this.DisplayRateLabel.Text = "0";
             // 
             // MainDlg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(3804, 1753);
+            this.ClientSize = new System.Drawing.Size(2565, 1328);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.BenchmarkLog);
             this.Controls.Add(this.groupBox8);
@@ -1403,7 +1418,7 @@ namespace OCTSharp
             this.Controls.Add(this.chart);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "MainDlg";
             this.Text = "OCTSharp v1.4.8";
             this.groupBox1.ResumeLayout(false);
@@ -1470,7 +1485,6 @@ namespace OCTSharp
         private Button SaveButton;
         private Button StopButton;
         private TextBox SaveFilePathBox;
-        private Button browseWriteButton;
         private Label label10;
 
         //DEBUG
@@ -1562,7 +1576,6 @@ namespace OCTSharp
         private NumericUpDown aNumBox;
         private Label label12;
         private ComboBox pixelDepthBox;
-        private Button CalibrationButton;
         private GroupBox groupBox2;      
         private Label label17;
         private Label AcqRateLabel;
@@ -1630,5 +1643,8 @@ namespace OCTSharp
         private Label label29;
         private Label DisplayRateLabel;
         private StreamWriter fpsFile;
+        private Button CalBroBtn;
+        private TextBox CalibrationCurveTextBox;
+        private Button browseWriteButton;
     }
 }

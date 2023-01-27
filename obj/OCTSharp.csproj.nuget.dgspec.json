@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj": {}
+  },
+  "projects": {
+    "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj",
+        "projectName": "OCTSharp",
+        "projectPath": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj",
+        "packagesPath": "C:\\Users\\lamata\\.nuget\\packages\\",
+        "outputPath": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lamata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "ManagedCuda-11": {
+              "target": "Package",
+              "version": "[11.0.43, )"
+            },
+            "ManagedCuda-CUBLAS.NETStandard": {
+              "target": "Package",
+              "version": "[9.1.300, )"
+            },
+            "ManagedCuda-CUFFT": {
+              "target": "Package",
+              "version": "[11.0.43, )"
+            },
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "OpenTK.GLControl": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "ZedGraph": {
+              "target": "Package",
+              "version": "[5.1.7, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,3 @@
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.ResolveComReference.cache
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.MainDlg.resources
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\$safeprojectname$.Properties.Resources.resources
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.GenerateResource.cache
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.CoreCompileInputs.cache
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\OCTSharp.exe.config
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\OCTSharp.exe.manifest
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\OCTSharp.application
@@ -136,9 +131,13 @@ D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\NationalInstruments.Comm
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\NationalInstruments.DAQmx.xml
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Release\NationalInstruments.Common.xml
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.exe.config
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.ResolveComReference.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.MainDlg.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\$safeprojectname$.Properties.Resources.resources
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.GenerateResource.cache
+D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.CoreCompileInputs.cache
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.exe.manifest
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.application
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csproj.CopyComplete
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.exe
 D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.pdb
-D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\obj\x64\Release\OCTSharp.csprojAssemblyReference.cache

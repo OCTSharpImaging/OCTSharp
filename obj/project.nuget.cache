@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "DoU0WHa03d5Ftreu7fJbgQ3nDLM8iQXaMhMaqU1knj184G/KHzGKC1jH1sIBNMIBDVUAQ3TPNTICnxLDijyNHQ==",
+  "success": true,
+  "projectFilePath": "D:\\Weihao Chen\\OCTSharp\\OCTSharp_v1.4.8\\OCTSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lamata\\.nuget\\packages\\managedcuda-11\\11.0.43\\managedcuda-11.11.0.43.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\managedcuda-cublas.netstandard\\9.1.300\\managedcuda-cublas.netstandard.9.1.300.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\managedcuda-cufft\\11.0.43\\managedcuda-cufft.11.0.43.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\managedcuda.netstandard\\9.1.300\\managedcuda.netstandard.9.1.300.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\mathnet.numerics\\4.8.1\\mathnet.numerics.4.8.1.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\opentk\\3.1.0\\opentk.3.1.0.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\opentk.glcontrol\\3.1.0\\opentk.glcontrol.3.1.0.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\system.drawing.common\\4.5.1\\system.drawing.common.4.5.1.nupkg.sha512",
+    "C:\\Users\\lamata\\.nuget\\packages\\zedgraph\\5.1.7\\zedgraph.5.1.7.nupkg.sha512"
+  ],
+  "logs": []
+}

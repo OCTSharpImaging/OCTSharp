@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.1500
+VisualStudioVersion = 15.0.28307.1738
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCTSharp", "OCTSharp.csproj", "{7D70BCCF-ED81-440D-91E9-F67533282F65}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaKernels", "..\CudaKernels.cu\CudaKernels.cu.vcxproj", "{48D280CA-2AFF-46D4-8480-C952EA050014}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaKernels", "CudaKernels.cu\CudaKernels.cu.vcxproj", "{48D280CA-2AFF-46D4-8480-C952EA050014}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OCTSharpInstaller", "OCTSharpInstaller\OCTSharpInstaller.vdproj", "{B412417D-5E1C-4C58-B021-4CF501CA13CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{48D280CA-2AFF-46D4-8480-C952EA050014}.Release|Any CPU.ActiveCfg = Release|x64
 		{48D280CA-2AFF-46D4-8480-C952EA050014}.Release|x64.ActiveCfg = Release|x64
 		{48D280CA-2AFF-46D4-8480-C952EA050014}.Release|x64.Build.0 = Release|x64
+		{B412417D-5E1C-4C58-B021-4CF501CA13CB}.Debug|Any CPU.ActiveCfg = Debug
+		{B412417D-5E1C-4C58-B021-4CF501CA13CB}.Debug|x64.ActiveCfg = Debug
+		{B412417D-5E1C-4C58-B021-4CF501CA13CB}.Release|Any CPU.ActiveCfg = Release
+		{B412417D-5E1C-4C58-B021-4CF501CA13CB}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

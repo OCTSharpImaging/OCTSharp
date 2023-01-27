@@ -101,7 +101,6 @@ namespace OCTSharp
         //*****************************************************************************************
         private bool CreateObjects()
         {
-            fpsFile = new StreamWriter(@"C:\Users\lamata\Desktop\FPS_Stats.txt");
             //update boolean variables
             bool success;
             if (enfaceBox.Checked)
@@ -436,7 +435,6 @@ namespace OCTSharp
                         if (process != null)
                         {
                             float processRate = 1000 / currProcess.Time;
-                            fpsFile.WriteLine(processRate.ToString());
                             //float processRate = currProcess.Time;
                             processRateLabel.Text = processRate.ToString();
                             if (FPSBox.Checked)
@@ -643,72 +641,6 @@ namespace OCTSharp
         }
         #endregion
 
-        private void CalibrationButton_Click(object sender, EventArgs e)
-        {
-            //openFileDialog1.InitialDirectory = "c:\\";
-            //openFileDialog1.Filter = "Excel File (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-            //openFileDialog1.FilterIndex = 2;
-            //openFileDialog1.RestoreDirectory = true;
-            string CalibrationFilePath;
-            //Get the path of calibration excel file (in row)
-            //CalibrationFilePath = openFileDialog1.FileName;
-            //string calibPath = Application.StartupPath + "\\CalibrationCurve.xlsx";//debug default path
-            string calibPath = @"D:\Weihao Chen\OCTSharp\OCTSharp_v1.4.8\bin\x64\Debug\CalibrationCurve.xlsx";
-            Excel.Application xls = new Excel.Application();
-            Excel.Workbook workbook = xls.Workbooks.Open(calibPath);
-            Excel.Worksheet worksheet = workbook.Sheets[1];
-            Excel.Range range = worksheet.UsedRange.Rows[1];
-            System.Array calibrationValue = (System.Array)range.Cells.Value;
-            phaseAry = calibrationValue.OfType<Object>().Select(o => (double)o).ToArray();
-            //genearte evenly spaced phase
-            evenPhaseAry = new double[aNum];
-            double[] pixelAry = new double[aNum];
-            double length = aNum - 1;
-            double phaseMax = phaseAry[aNum - 1];
-            double phaseMin = phaseAry[0];
-
-            if (phaseAry.Length == evenPhaseAry.Length)
-            {
-                for (int i = 0; i < aNum; i++)
-                {
-                    evenPhaseAry[i] = (i * (phaseMax - phaseMin) / length) + phaseMin;
-                }
-                for (int i = 0; i < aNum; i++)
-                {
-                    pixelAry[i] = i + 1;
-                }
-
-                //fit a new curve where x is phase and y is pixel number
-                fpixel = new float[aNum];
-                double[] polycof = new double[4];
-                polycof = Fit.Polynomial(phaseAry, pixelAry, 3,
-                    MathNet.Numerics.LinearRegression.DirectRegressionMethod.NormalEquations);
-                Polynomial poly = new Polynomial(polycof);
-
-                //evaluate frational pixel
-                for (int i = 0; i < evenPhaseAry.Length; i++)
-                {
-                    fpixel[i] = (float)poly.Evaluate(evenPhaseAry[i]);
-                }
-                workbook.Close();
-
-                Calib_a = polycof[3].ToString("0.#############");
-                Calib_b = polycof[2].ToString("0.##########");
-                Calib_c = polycof[1].ToString("0.######");
-                Calib_d = polycof[0].ToString("0.######");
-
-                Calib_aBox.Text = Calib_a;
-                Calib_bBox.Text = Calib_b;
-                Calib_cBox.Text = Calib_c;
-                Calib_dBox.Text = Calib_d;
-            }
-            else
-            {
-                MessageBox.Show("Calibration fucntion disabled. " +
-                    "Pixels number of the imported calibration cruve and Pixels number setting need to be same.");
-                calibrationBox.Checked = false;
-            }
-        }
         private void ModifyCalibCurveBtn_Click(object sender, EventArgs e)
         {
             evenPhaseAry = new double[aNum];
@@ -967,5 +899,83 @@ namespace OCTSharp
 
             SapBuffer loadBuffer = new SapBuffer(openFileName, SapBuffer.MemoryType.ScatterGather);
         }
+
+        private void CalBroBtn_Click(object sender, EventArgs e)
+        {
+            calibrationBox.CheckState = CheckState.Checked;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Raw Files|(*.raw)|All files (*.*)";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                openFileName = openFileDialog.FileName;
+
+            CalibrationCurveTextBox.Text = openFileName;
+
+            //openFileDialog1.InitialDirectory = "c:\\";
+            //openFileDialog1.Filter = "Excel File (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            //openFileDialog1.FilterIndex = 2;
+            //openFileDialog1.RestoreDirectory = true;
+            string CalibrationFilePath;
+            //Get the path of calibration excel file (in row)
+            //CalibrationFilePath = openFileDialog1.FileName;
+            //string calibPath = Application.StartupPath + "\\CalibrationCurve.xlsx";//debug default path
+            string calibPath = openFileName;
+            Excel.Application xls = new Excel.Application();
+            Excel.Workbook workbook = xls.Workbooks.Open(calibPath);
+            Excel.Worksheet worksheet = workbook.Sheets[1];
+            Excel.Range range = worksheet.UsedRange.Rows[1];
+            System.Array calibrationValue = (System.Array)range.Cells.Value;
+            phaseAry = calibrationValue.OfType<Object>().Select(o => (double)o).ToArray();
+            //genearte evenly spaced phase
+            evenPhaseAry = new double[aNum];
+            double[] pixelAry = new double[aNum];
+            double length = aNum - 1;
+            double phaseMax = phaseAry[aNum - 1];
+            double phaseMin = phaseAry[0];
+
+            if (phaseAry.Length == evenPhaseAry.Length)
+            {
+                for (int i = 0; i < aNum; i++)
+                {
+                    evenPhaseAry[i] = (i * (phaseMax - phaseMin) / length) + phaseMin;
+                }
+                for (int i = 0; i < aNum; i++)
+                {
+                    pixelAry[i] = i + 1;
+                }
+
+                //fit a new curve where x is phase and y is pixel number
+                fpixel = new float[aNum];
+                double[] polycof = new double[4];
+                polycof = Fit.Polynomial(phaseAry, pixelAry, 3,
+                    MathNet.Numerics.LinearRegression.DirectRegressionMethod.NormalEquations);
+                Polynomial poly = new Polynomial(polycof);
+
+                //evaluate frational pixel
+                for (int i = 0; i < evenPhaseAry.Length; i++)
+                {
+                    fpixel[i] = (float)poly.Evaluate(evenPhaseAry[i]);
+                }
+                workbook.Close();
+
+                Calib_a = polycof[3].ToString("0.#############");
+                Calib_b = polycof[2].ToString("0.##########");
+                Calib_c = polycof[1].ToString("0.######");
+                Calib_d = polycof[0].ToString("0.######");
+
+                Calib_aBox.Text = Calib_a;
+                Calib_bBox.Text = Calib_b;
+                Calib_cBox.Text = Calib_c;
+                Calib_dBox.Text = Calib_d;
+            }
+            else
+            {
+                MessageBox.Show("Calibration fucntion disabled. " +
+                    "Pixels number of the imported calibration cruve and Pixels number setting need to be same.");
+                calibrationBox.Checked = false;
+            }
+        }
+
     }
 }

@@ -13,3 +13,4 @@
 #define __global__ __location__(global)
 #define __global__ __location__(global)
 #define __global__ __location__(global)
+#define __global__ __location__(global)

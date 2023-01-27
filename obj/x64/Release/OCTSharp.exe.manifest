@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="OCTSharp.exe" version="1.2.0.22" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <asmv1:assemblyIdentity name="OCTSharp.exe" version="1.2.0.23" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <description asmv2:iconFile="OCTSharpLogo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="OCTSharp" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
@@ -150,14 +151,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OCTSharp.exe" size="57856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OCTSharp.exe" size="400896">
       <assemblyIdentity name="OCTSharp" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8cYPUmGI3NhmX7uqJpGJcyTwkOeInAxsy31nUJPYeig=</dsig:DigestValue>
+        <dsig:DigestValue>+sj08yQGIUn0Sp/PvbGS2QfySM3gJYWMkKgGaJahg+U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1500,6 +1501,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>QV3WhnzxBl2LHqUDBQ2p6/h/WofCH/pwvY3Ad8HtInY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="OCTSharpLogo.ico" size="168651">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R54U2D8V9MIV5aYiPp7wOqs8PcImz+wQpbE7BDctpMY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
