@@ -67,7 +67,7 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   
   # OCT Display options 
   <p align="center">
-<img src="[https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png](https://user-images.githubusercontent.com/109831624/215048335-0ca6b53e-2fd6-42e5-9c5a-ebf378a13637.png)">
+<img src="https://user-images.githubusercontent.com/109831624/215048335-0ca6b53e-2fd6-42e5-9c5a-ebf378a13637.png">
 <p align="center">Figure4. Different visualization features in OCTSharp showing the newt anterior chamber of eye. (A) B-Scan (2048x2048) of a Newt eye; (B) An average B-Scan consists of 10 B-Scans at the same scanning position as A’s (B); (C) A Speckle Variant map that shows the blood vessels location in A; (D) An enface image of a newt’s eye; (E) An Volumetric C-Scan generated from data collected in OCTSharp; (F) The angiography display function of OCTSharp that shows the enface blood vessels of (D)..<p align="center">
   
   # Compile/Debug with Visual Studio
