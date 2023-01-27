@@ -34,7 +34,7 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
 3. Open OCTSharp.exe
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png" width="800" height="400">
+<img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
 <p align="center">Figure 3. OCTSharp GUI.<p align="center">
   
  # Configure .ccf Camera File
@@ -44,9 +44,9 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
   
   ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS (more avaliable in Camera files folder) 
   * Basic Timing
-  <img src="" width="800" height="400">
+  <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG" width="800" height="400">
   * Advance Control
-   <img src="" width="800" height="400">
+   <img src="https://user-images.githubusercontent.com/109831624/215043817-a52b2ede-8e77-4346-8923-fb5855997ff5.JPG" width="800" height="400">
   * Externel Trigger
    <img src="" width="800" height="400">
   * Image Buffer and ROI
