@@ -96,10 +96,11 @@ Two different PC configurations were tested (Tab 1). The highest A-Scan acquisit
   The auto garbage collection (GC) mechanism for memory management is one of the major concerns for using C# in real-time application. GC event occurs when physical memory is low or there are dead objects. This mechanism can be effectively reduced by an efficient memory structure, such as recycled memory and reusable objects. 
   
   Plot charting at the User Interface (UI) triggers the most GC events during real-time imaging (Fig. 6). GC event has 3 different depths, Gen 0, Gen1 and Gen 2, where Gen 2 GC is known as a full GC that suspends all other threads. We shown that the native C# charting function generates lots of unintentional GC events during rapid charting update (Fig. 6 – blue bar). However, most of these GC event occurs at the Gen 0 and 1 depth which does not suspend other threads’ activities. During a 1-hour continuous imaging section, the C# native charting function leads to 1.13% of blocking time from all threads combined. However, those GC events could be reduced by using a more efficient charting functions. For example, we use SaperLT SDK to plot the chart by displaying a binary image (Fig. 6 –orange bar). This method substantially reduces the GC time down to 0.0488% of the imaging time, which is close to the 0.0401% total blocking time at no charting condition (Fig. 6-gray).
-
+  
+<p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215241881-4dcbfc89-f449-4e31-a9fe-6950772bae15.png">
 Figure 6. The time spent in GC during real-time image acquisition.
-
+<p align="center">
 
   # Compile/Debug with Visual Studio
   * Visual Studio 2017/2019 Community
