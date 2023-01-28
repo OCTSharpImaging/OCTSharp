@@ -69,10 +69,15 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   5. Load the corresponding .ccf file
   6. Load 3rd Calibration Curve as excel file if needed 
   7. Set OCT parameters as needed
+  * ANum: number of Linear Camera's pixels 
+  * BNum: number of A-Scans
+  * CNum: number of B-Scans
+  * FNum: number of frames for each B-Scans
+  * RNum: number of A-Scans for scanner return
   8. Enable display features (Warning: Enable mutiple plotting charts may cause GUI freeze)
   9. Click "Scan" button to perform Imaging
   10. Click "Stop" to exit imaging section
-  11. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled)
+  11. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled with directory)
   
   # OCT Display options 
   <p align="center">
