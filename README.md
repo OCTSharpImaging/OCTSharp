@@ -48,13 +48,13 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   
   ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS  (more avaliable in Camera files folder) 
   * Basic Timing
-    <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG">
+  <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG">
   * Advance Control
-    <img src="https://user-images.githubusercontent.com/109831624/215043817-a52b2ede-8e77-4346-8923-fb5855997ff5.JPG">
+  <img src="https://user-images.githubusercontent.com/109831624/215043817-a52b2ede-8e77-4346-8923-fb5855997ff5.JPG">
   * Externel Trigger
-    <img src="https://user-images.githubusercontent.com/109831624/215044067-5db7f993-97a7-42ae-93d3-9ce68c16b471.JPG">
+  <img src="https://user-images.githubusercontent.com/109831624/215044067-5db7f993-97a7-42ae-93d3-9ce68c16b471.JPG">
   * Image Buffer and ROI
-    <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG"> 
+  <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG"> 
 
   # Get Started to image with OCTSharp
   1. Download Zip 
@@ -68,10 +68,11 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   4. Adjust Scanner Voltage (sacaning distance)
   5. Load the corresponding .ccf file
   6. Load 3rd Calibration Curve as excel file if needed 
-  7. Enable display features (Warning: Enable mutiple plotting charts may cause GUI freeze)
-  8. Click "Scan" button to perform Imaging
-  9. Click "Stop" to exit imaging section
-  10. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled)
+  7. Set OCT parameters as needed
+  8. Enable display features (Warning: Enable mutiple plotting charts may cause GUI freeze)
+  9. Click "Scan" button to perform Imaging
+  10. Click "Stop" to exit imaging section
+  11. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled)
   
   # OCT Display options 
   <p align="center">
