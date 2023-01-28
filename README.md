@@ -31,14 +31,15 @@ OCTSharp is a muti-threads C# Windows form application that provides hardware co
 # Hardware Configuration
 Figure 3 shows the current hardware configuration. The C# .NET layer was developed using the Software Development Kit (SDK) from Teledyne Dalsa and National Instrument. Therefore, any image acquisition card (IMAQ) from Teledyne Dalsa and data acquisition card (DAQ) from National Instrument are compatible with OCTSharp. In this project, we tested mutiple IMAQ cards, including Xtium-CL MX4 and Xcelera-CL LX1; DAQ cards including PCIe 6361and PCI 6221. Four linear cameras have been also tested independently, which works as expected, including Dalsa Octoplus, AVIIVA SM2 4010 CL, Basler spL 2048 70km, and Sensor Unlimited GL 2048R. User can use any linear camera in OCTSharp as long as the camera file is configured appropriately. Galvanometer scanner can be modified freely as well, where the scanning distance can be adjusted via voltage parameters setting on UI. DAQ is mainly responsible for hardware synchronization and scanner control. DAQs from other vendors can be used as long as C# SDK is provided and the corresponding analog and digital hardware functions are modified accordingly. The master clock of the system is supplied as a strobe signal by a user-specified internal frequency from the Teledyne Dalsa IMAQ card, in the vendor software: CamExpert. Using this master clock, OCTSharp synchronizes the camera with the galvanometer scanner. In addition, the camera runs on external trigger mode based on the acquisition clock, which is generated from master clock and it is adjustable by the user.
   
-  <p align="center">
+<p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215050382-0af7a790-d49a-43b4-b245-b5b68f4e1d79.PNG">
 <p align="center">Figure 3. OCTSharp hardware configuration. AO0, AO1 are analog output channels on PCIe-6361; CTR0 and TRIG 1 are trigger channels on the PCIe-6361, which are acquisition trigger for camera and master clock respectively; J4 I/O is the general Input & Output ports on the Xtium CL MX4; Two medium CameraLink cables are used to achieve 250kHz image acquisition with Dalsa OCTOPLUS camera at 10-bit 8TAP mode and 85MHz pixel clock. MX-4 has a bandwidth of 1.4GB/s on PCIe Gen.2x4 connection <p align="center">
   
  # Environment Preparation
  ## Set Camera hareware parameters with manufacture's software
-  * For Example, Dalsa Teledyne OCTOPLUS Camera is configured with CommCam.exe
-  * Set Camera parameters, such as: Line Acquisition Rate, Externel Trigger, CameraLink Tap Config, Image Bit Rate, etc..
+  * For example, Dalsa Teledyne OCTOPUS Camera is configured with CommCam.exe
+  * Set camera parameters, such as: Line Acquisition Rate, Externel Trigger, CameraLink Tap Config, Image Bit Rate, etc..
+  (These settings need to be consistent with the parameters in camera files, otherwise OCTSharp won't perform properly)
   <img src="https://user-images.githubusercontent.com/109831624/215045672-5208d85c-580b-47e0-9c49-ff2e0339ec74.JPG">
   
  ## Configure .ccf Camera File
