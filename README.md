@@ -59,7 +59,7 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   # Get Started to image with OCTSharp
   1. Download Zip 
   2. Extract all files
-  3. Open OCTSharp.exe
+  3. Open OCTSharp.exe (at \bin\x64\Release)
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215039431-ff777656-cea9-44fc-9b4a-d6769c5cabdc.png">
