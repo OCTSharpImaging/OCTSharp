@@ -14,7 +14,7 @@ as open-source software that aims to significantly lower the programming complex
 interactive, intuitive, and high-performance OCT developmental solution.
 
 # Programming Structure
-OCTSharp is a muti-threads C# Windows form application that provides hardware control, data acquisition, real-time data processing, and image visualization (Fig. 1). The frontend User Interface (UI) is developed with native .NET framework, and the backend is consisted of two fundamental layers: the hardware control layer developed with the C# SDK  from Teledyne SaperaLT and National Instrument, and the processing layer that is built with ManagedCuda (Fig. 2). ManagedCuda is an open-source C# Application Program Interface (API) that allow CUDA usage in C#. All CUDA kernels are pre-compiled and accessed in real-time during parallel CUDA processing pipeline.
+OCTSharp is a muti-threads C# Windows form application that provides hardware control, data acquisition, real-time data processing, and image visualization. The frontend User Interface (UI) is developed with native .NET framework, and the backend is consisted of two fundamental layers: the hardware control layer developed with the C# SDK  from Teledyne SaperaLT and National Instrument, and the processing layer that is built with ManagedCuda (Fig. 1). ManagedCuda is an open-source C# Application Program Interface (API) that allow CUDA usage in C#. All CUDA kernels are pre-compiled and accessed in real-time during parallel CUDA processing pipeline.
   
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215009909-802d63ec-3259-4e65-abfa-3c3b90066c56.png" width="200" height="230">
@@ -47,14 +47,14 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   3. Create New .ccf File and set Camera settings
   
   ## Example Camera Settings: 250kHz Dalsa Teledyne OCTOPLUS  (more avaliable in Camera files folder) 
-  * Basic Timing
-  <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG">
-  * Advance Control
-   <img src="https://user-images.githubusercontent.com/109831624/215043817-a52b2ede-8e77-4346-8923-fb5855997ff5.JPG">
-  * Externel Trigger
-   <img src="https://user-images.githubusercontent.com/109831624/215044067-5db7f993-97a7-42ae-93d3-9ce68c16b471.JPG">
-  * Image Buffer and ROI
-   <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG">
+    * Basic Timing
+    <img src="https://user-images.githubusercontent.com/109831624/215043514-d42c3314-19a3-430b-bf7f-f1efdf808872.JPG">  
+    * Advance Control
+     <img src="https://user-images.githubusercontent.com/109831624/215043817-a52b2ede-8e77-4346-8923-fb5855997ff5.JPG">  
+    * Externel Trigger
+     <img src="https://user-images.githubusercontent.com/109831624/215044067-5db7f993-97a7-42ae-93d3-9ce68c16b471.JPG">  
+    * Image Buffer and ROI
+     <img src="https://user-images.githubusercontent.com/109831624/215044140-f078f96c-de80-412c-ab2e-02719931c003.JPG">  
 
   # Get Started to image with OCTSharp
   1. Download Zip 
@@ -69,7 +69,7 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
   5. Load the corresponding .ccf file
   6. Load 3rd Calibration Curve as excel file if needed 
   7. Enable display features (Warning: Enable mutiple plotting charts may cause GUI freeze)
-  8. Click "Live" button to perform Imaging
+  8. Click "Scan" button to perform Imaging
   9. Click "Stop" to exit imaging section
   10. Click "Save" button to perform one time scan and save raw data to the pre-defined directory (if Save is enabled)
   
