@@ -7,7 +7,7 @@ visualization. Commercial OCT software provided with the OCT devices is convenie
 the source code to tailor the software for specific applications nor modify the hardware. For independent research groups, a
 significant amount of effort is often spent on developing OCT software for real-time imaging, especially for clinical
 applications. On the other hand, developing software that accommodates different hardware is often challenging. Virtual
-processing plugin (https://github.com/spectralcode/OCTproZ) and OCT software development library in C++ (https://www.vortex-oct.dev/) are being explored. However, developing or
+processing plugin in C++ (https://github.com/spectralcode/OCTproZ) and OCT software development library in C++ (https://www.vortex-oct.dev/) are being explored. However, developing or
 maintaining C++ based OCT software is often challenging for non-professional software developers due to its complexity
 of low-level memory management and the steep learning curve of C++ programming. In this project, OCTSharp is developed
 as open-source software that aims to significantly lower the programming complexity and development cycle for an
