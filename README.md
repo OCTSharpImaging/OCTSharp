@@ -86,7 +86,7 @@ Figure 3 shows the current hardware configuration. The C# .NET layer was develop
 <p align="center">Figure 5. Different visualization features in OCTSharp showing the newt anterior chamber of eye. (A) B-Scan (2048x2048) of a Newt eye; (B) An average B-Scan consists of 10 B-Scans at the same scanning position as A’s (B); (C) A Speckle Variant map that shows the blood vessels location in A; (D) An enface image of a newt’s eye; (E) An Volumetric C-Scan generated from data collected in OCTSharp; (F) The angiography display function of OCTSharp that shows the enface blood vessels of (D)..<p align="center">
   
   # Software Performance
-Two different PC configurations were tested (Tab 1). The highest A-Scan acquisition rate is 250kHz, and A-Scan processing speed can reach up to 350 kHz. The limitation for current processing speed is the data I/O between CPU memory and GPU memory, as it takes up about 50% of the CPU resource. 
+Two different PC configurations were tested (Tab 1). The highest A-Scan acquisition rate is 250kHz ( this is the limit set by the camera speed but does not represent the maximum acquisition speed OCTSharp, and it can be improved by using a faster camera), and A-Scan processing speed can reach up to 350 kHz. The limitation for current processing speed is the data I/O between CPU memory and GPU memory, as it takes up about 50% of the CPU resource. 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/109831624/215051432-abee4bf4-b314-4061-a471-5854dd146251.png">
 <p align="center">Table 1. Software Performance w/ different PC Configurations.<p align="center">
