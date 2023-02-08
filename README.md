@@ -105,6 +105,10 @@ Figure 6. The time spent in GC during real-time image acquisition.
   # Compile/Debug with Visual Studio
   * Visual Studio 2017/2019 Community
   
+  # Compile your own CUDA processing file  
+  OCTProz is an Open-source OCT software in C++ (https://github.com/spectralcode/OCTproZ) that provides a set of OCT processing functions in CUDA C. USer can refer to their repository and compile your own CUDA file based on your processing requirement.
+  
+  
   # Version History
   * v1.4.8: First release version
   
