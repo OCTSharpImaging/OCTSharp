@@ -120,7 +120,7 @@ Figure 6. The time spent in GC during real-time image acquisition.
  ⬜ Bidirectional scanner pattern to optimize acquisition speed  
  ⬜ Flat GUI update  
     
-  #Known Bugs
+  # Known Bugs
    
   
   # License  
