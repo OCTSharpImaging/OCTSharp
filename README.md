@@ -107,7 +107,7 @@ Figure 6. The time spent in GC during real-time image acquisition.
   
   # Compile your own CUDA processing file  
   OCTProz is an Open-source OCT project in C++ (https://github.com/spectralcode/OCTproZ) that provides a set of OCT processing functions in CUDA C. Therefore their CUDA file provides a great reference for OCTSharp CUDA processing pipeline. v1.4.8 version currently provides basic OCT processing functions, including DC removal, 3rd calibration, FFT and modulus calculation. More processing functions will be added in the future.  User can also refer to OCTProz's repository and compile your own CUDA file.
-  * CUDA Compile steps
+  * CUDA Compile steps  
   1.TBA
   
   
