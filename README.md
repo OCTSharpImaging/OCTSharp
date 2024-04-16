@@ -94,7 +94,7 @@ Various hardware configurations were tested to validate the software’s compati
 
 <p align="center">
 <img src="https://github.com/OCTSharpImaging/OCTSharp/assets/109831624/718385ab-b39f-452f-afd8-950a08b31a76">
-<p align="center">Table 1. onfiguration and performance of two different hardware platforms. 𝑻𝒔: B-Scan Acquisition Cycle Time. 𝑻𝒑: B-Scan Processing Time..<p align="center">
+<p align="center">Table 1. Configuration and performance of two different hardware platforms. 𝑻𝒔: B-Scan Acquisition Cycle Time. 𝑻𝒑: B-Scan Processing Time..<p align="center">
   
 
   
